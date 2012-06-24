@@ -1,0 +1,32 @@
+[
+ {
+  "pk": 1, 
+  "model": "auth.group", 
+  "fields": {
+   "name": "finance", 
+   "permissions": [
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30
+   ]
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "auth.group", 
+  "fields": {
+   "name": "registrar", 
+   "permissions": [
+    34, 
+    35, 
+    36, 
+    31, 
+    32, 
+    33
+   ]
+  }
+ }
+]

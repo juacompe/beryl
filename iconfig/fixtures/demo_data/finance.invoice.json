@@ -1,0 +1,2015 @@
+[
+ {
+  "pk": 9, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 10:13:23", 
+   "date_viewed": "2010-06-18 11:51:33", 
+   "student": 8, 
+   "deadline": "2010-06-20 10:13:23"
+  }
+ }, 
+ {
+  "pk": 22, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:36:56", 
+   "date_created": "2010-03-22 10:50:36", 
+   "date_viewed": "2010-06-18 11:36:40", 
+   "student": 21, 
+   "deadline": "2010-06-20 10:50:36"
+  }
+ }, 
+ {
+  "pk": 24, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 11:00:01", 
+   "date_viewed": null, 
+   "student": 23, 
+   "deadline": "2010-06-20 11:00:01"
+  }
+ }, 
+ {
+  "pk": 26, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:10:51", 
+   "date_created": "2010-03-22 11:13:16", 
+   "date_viewed": "2010-06-18 12:03:27", 
+   "student": 25, 
+   "deadline": "2010-06-20 11:13:16"
+  }
+ }, 
+ {
+  "pk": 28, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:10:43", 
+   "date_created": "2010-03-22 11:24:46", 
+   "date_viewed": "2010-06-18 11:09:50", 
+   "student": 27, 
+   "deadline": "2010-06-20 11:24:46"
+  }
+ }, 
+ {
+  "pk": 30, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 11:31:39", 
+   "date_viewed": "2010-06-14 10:26:56", 
+   "student": 29, 
+   "deadline": "2010-06-20 11:31:39"
+  }
+ }, 
+ {
+  "pk": 32, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:06", 
+   "date_created": "2010-03-22 11:39:21", 
+   "date_viewed": "2010-06-18 11:41:04", 
+   "student": 31, 
+   "deadline": "2010-06-20 11:39:21"
+  }
+ }, 
+ {
+  "pk": 34, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:12", 
+   "date_created": "2010-03-22 11:54:40", 
+   "date_viewed": "2010-06-18 11:58:08", 
+   "student": 33, 
+   "deadline": "2010-06-20 11:54:40"
+  }
+ }, 
+ {
+  "pk": 36, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 12:01:30", 
+   "date_viewed": "2010-06-18 12:16:32", 
+   "student": 35, 
+   "deadline": "2010-06-20 12:01:30"
+  }
+ }, 
+ {
+  "pk": 38, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 13:39:04", 
+   "date_viewed": null, 
+   "student": 37, 
+   "deadline": "2010-06-20 13:39:04"
+  }
+ }, 
+ {
+  "pk": 40, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:20", 
+   "date_created": "2010-03-22 13:45:00", 
+   "date_viewed": "2010-06-18 12:31:46", 
+   "student": 39, 
+   "deadline": "2010-06-20 13:45:00"
+  }
+ }, 
+ {
+  "pk": 42, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:31", 
+   "date_created": "2010-03-22 13:53:24", 
+   "date_viewed": "2010-06-18 12:36:00", 
+   "student": 41, 
+   "deadline": "2010-06-20 13:53:24"
+  }
+ }, 
+ {
+  "pk": 44, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:52", 
+   "date_created": "2010-03-22 14:03:16", 
+   "date_viewed": "2010-06-21 08:55:27", 
+   "student": 43, 
+   "deadline": "2010-06-20 14:03:16"
+  }
+ }, 
+ {
+  "pk": 46, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:12", 
+   "date_created": "2010-03-22 14:13:00", 
+   "date_viewed": "2010-06-21 08:59:24", 
+   "student": 45, 
+   "deadline": "2010-06-20 14:13:00"
+  }
+ }, 
+ {
+  "pk": 48, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 15:03:01", 
+   "date_viewed": null, 
+   "student": 47, 
+   "deadline": "2010-06-20 15:03:01"
+  }
+ }, 
+ {
+  "pk": 50, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:38", 
+   "date_created": "2010-03-22 15:08:50", 
+   "date_viewed": "2010-06-21 08:52:19", 
+   "student": 49, 
+   "deadline": "2010-06-20 15:08:50"
+  }
+ }, 
+ {
+  "pk": 52, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:44", 
+   "date_created": "2010-03-22 15:16:13", 
+   "date_viewed": "2010-06-21 08:53:50", 
+   "student": 51, 
+   "deadline": "2010-06-20 15:16:13"
+  }
+ }, 
+ {
+  "pk": 54, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-22 15:27:42", 
+   "date_viewed": null, 
+   "student": 53, 
+   "deadline": "2010-06-20 15:27:42"
+  }
+ }, 
+ {
+  "pk": 56, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:02", 
+   "date_created": "2010-03-22 15:37:00", 
+   "date_viewed": "2010-06-21 08:50:39", 
+   "student": 55, 
+   "deadline": "2010-06-20 15:37:00"
+  }
+ }, 
+ {
+  "pk": 58, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:36:48", 
+   "date_created": "2010-03-22 15:45:01", 
+   "date_viewed": "2010-06-21 08:48:00", 
+   "student": 57, 
+   "deadline": "2010-06-20 15:45:01"
+  }
+ }, 
+ {
+  "pk": 60, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:36:37", 
+   "date_created": "2010-03-22 15:54:02", 
+   "date_viewed": "2010-06-21 08:43:42", 
+   "student": 59, 
+   "deadline": "2010-06-20 15:54:02"
+  }
+ }, 
+ {
+  "pk": 62, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:05", 
+   "date_created": "2010-03-22 16:05:13", 
+   "date_viewed": "2010-06-21 09:06:06", 
+   "student": 61, 
+   "deadline": "2010-06-20 16:05:13"
+  }
+ }, 
+ {
+  "pk": 68, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:19", 
+   "date_created": "2010-03-23 08:34:27", 
+   "date_viewed": "2010-06-21 09:10:06", 
+   "student": 67, 
+   "deadline": "2010-06-21 08:34:27"
+  }
+ }, 
+ {
+  "pk": 71, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:13", 
+   "date_created": "2010-03-23 10:29:06", 
+   "date_viewed": "2010-06-21 09:08:27", 
+   "student": 70, 
+   "deadline": "2010-06-21 10:29:06"
+  }
+ }, 
+ {
+  "pk": 73, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-23 11:03:00", 
+   "date_viewed": null, 
+   "student": 72, 
+   "deadline": "2010-06-21 11:03:00"
+  }
+ }, 
+ {
+  "pk": 75, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:41", 
+   "date_created": "2010-03-23 11:41:21", 
+   "date_viewed": "2010-06-21 09:31:38", 
+   "student": 74, 
+   "deadline": "2010-06-21 11:41:21"
+  }
+ }, 
+ {
+  "pk": 77, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:30", 
+   "date_created": "2010-03-23 11:58:11", 
+   "date_viewed": "2010-06-21 09:29:21", 
+   "student": 76, 
+   "deadline": "2010-06-21 11:58:11"
+  }
+ }, 
+ {
+  "pk": 79, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:24", 
+   "date_created": "2010-03-23 13:35:26", 
+   "date_viewed": "2010-06-21 09:21:04", 
+   "student": 78, 
+   "deadline": "2010-06-21 13:35:26"
+  }
+ }, 
+ {
+  "pk": 81, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:59", 
+   "date_created": "2010-03-23 13:54:29", 
+   "date_viewed": "2010-06-21 09:47:58", 
+   "student": 80, 
+   "deadline": "2010-06-21 13:54:29"
+  }
+ }, 
+ {
+  "pk": 84, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:04", 
+   "date_created": "2010-03-23 14:14:15", 
+   "date_viewed": "2010-06-21 09:49:39", 
+   "student": 83, 
+   "deadline": "2010-06-21 14:14:15"
+  }
+ }, 
+ {
+  "pk": 86, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:26", 
+   "date_created": "2010-03-23 15:06:04", 
+   "date_viewed": "2010-06-21 09:36:06", 
+   "student": 85, 
+   "deadline": "2010-06-21 15:06:04"
+  }
+ }, 
+ {
+  "pk": 88, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:07", 
+   "date_created": "2010-03-23 16:05:53", 
+   "date_viewed": "2010-06-21 10:22:18", 
+   "student": 87, 
+   "deadline": "2010-06-21 16:05:53"
+  }
+ }, 
+ {
+  "pk": 90, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:42", 
+   "date_created": "2010-03-23 16:33:12", 
+   "date_viewed": "2010-06-21 10:11:11", 
+   "student": 89, 
+   "deadline": "2010-06-21 16:33:12"
+  }
+ }, 
+ {
+  "pk": 93, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:51", 
+   "date_created": "2010-03-24 09:46:17", 
+   "date_viewed": "2010-06-21 10:16:54", 
+   "student": 92, 
+   "deadline": "2010-06-22 09:46:17"
+  }
+ }, 
+ {
+  "pk": 95, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:56", 
+   "date_created": "2010-03-24 10:20:39", 
+   "date_viewed": "2010-06-21 10:19:28", 
+   "student": 94, 
+   "deadline": "2010-06-22 10:20:39"
+  }
+ }, 
+ {
+  "pk": 97, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:11", 
+   "date_created": "2010-03-24 10:30:40", 
+   "date_viewed": "2010-06-21 10:25:52", 
+   "student": 96, 
+   "deadline": "2010-06-22 10:30:40"
+  }
+ }, 
+ {
+  "pk": 99, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:20", 
+   "date_created": "2010-03-24 10:33:25", 
+   "date_viewed": "2010-06-21 10:27:19", 
+   "student": 98, 
+   "deadline": "2010-06-22 10:33:25"
+  }
+ }, 
+ {
+  "pk": 101, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:03", 
+   "date_created": "2010-03-24 10:57:00", 
+   "date_viewed": "2010-06-21 10:29:26", 
+   "student": 100, 
+   "deadline": "2010-06-22 10:57:00"
+  }
+ }, 
+ {
+  "pk": 104, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:25", 
+   "date_created": "2010-03-24 11:09:03", 
+   "date_viewed": "2010-06-21 10:31:12", 
+   "student": 103, 
+   "deadline": "2010-06-22 11:09:03"
+  }
+ }, 
+ {
+  "pk": 112, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:32", 
+   "date_created": "2010-03-24 11:27:49", 
+   "date_viewed": "2010-06-21 10:33:09", 
+   "student": 111, 
+   "deadline": "2010-06-22 11:27:49"
+  }
+ }, 
+ {
+  "pk": 114, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:01:30", 
+   "date_created": "2010-03-24 11:49:22", 
+   "date_viewed": "2010-06-21 10:41:42", 
+   "student": 113, 
+   "deadline": "2010-06-22 11:49:22"
+  }
+ }, 
+ {
+  "pk": 116, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:46", 
+   "date_created": "2010-03-24 12:01:01", 
+   "date_viewed": "2010-06-21 10:13:57", 
+   "student": 115, 
+   "deadline": "2010-06-22 12:01:01"
+  }
+ }, 
+ {
+  "pk": 118, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-24 13:50:59", 
+   "date_viewed": null, 
+   "student": 117, 
+   "deadline": "2010-06-22 13:50:59"
+  }
+ }, 
+ {
+  "pk": 120, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:46", 
+   "date_created": "2010-03-24 14:20:24", 
+   "date_viewed": "2010-06-21 09:37:49", 
+   "student": 119, 
+   "deadline": "2010-06-22 14:20:24"
+  }
+ }, 
+ {
+  "pk": 122, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:38:52", 
+   "date_created": "2010-03-24 15:00:39", 
+   "date_viewed": "2010-06-21 09:43:35", 
+   "student": 121, 
+   "deadline": "2010-06-22 15:00:39"
+  }
+ }, 
+ {
+  "pk": 124, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-24 15:02:34", 
+   "date_viewed": "2010-06-21 09:39:42", 
+   "student": 123, 
+   "deadline": "2010-06-22 15:02:34"
+  }
+ }, 
+ {
+  "pk": 126, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:10", 
+   "date_created": "2010-03-24 15:16:23", 
+   "date_viewed": "2010-06-21 09:54:10", 
+   "student": 125, 
+   "deadline": "2010-06-22 15:16:23"
+  }
+ }, 
+ {
+  "pk": 128, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:16", 
+   "date_created": "2010-03-24 15:21:07", 
+   "date_viewed": "2010-06-21 09:57:05", 
+   "student": 127, 
+   "deadline": "2010-06-22 15:21:07"
+  }
+ }, 
+ {
+  "pk": 130, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:21", 
+   "date_created": "2010-03-24 15:26:25", 
+   "date_viewed": "2010-06-21 09:59:51", 
+   "student": 129, 
+   "deadline": "2010-06-22 15:26:25"
+  }
+ }, 
+ {
+  "pk": 132, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:28", 
+   "date_created": "2010-03-24 15:36:46", 
+   "date_viewed": "2010-06-21 10:02:05", 
+   "student": 131, 
+   "deadline": "2010-06-22 15:36:46"
+  }
+ }, 
+ {
+  "pk": 134, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:37:56", 
+   "date_created": "2010-03-24 15:47:58", 
+   "date_viewed": "2010-06-21 10:07:25", 
+   "student": 133, 
+   "deadline": "2010-06-22 15:47:58"
+  }
+ }, 
+ {
+  "pk": 136, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:39:37", 
+   "date_created": "2010-03-24 16:10:17", 
+   "date_viewed": "2010-06-21 10:04:13", 
+   "student": 135, 
+   "deadline": "2010-06-22 16:10:16"
+  }
+ }, 
+ {
+  "pk": 138, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:01:51", 
+   "date_created": "2010-03-25 08:55:03", 
+   "date_viewed": "2010-06-21 10:53:15", 
+   "student": 137, 
+   "deadline": "2010-06-23 08:55:03"
+  }
+ }, 
+ {
+  "pk": 140, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:02:36", 
+   "date_created": "2010-03-25 09:07:58", 
+   "date_viewed": "2010-06-21 11:07:14", 
+   "student": 139, 
+   "deadline": "2010-06-23 09:07:58"
+  }
+ }, 
+ {
+  "pk": 142, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-25 10:26:22", 
+   "date_viewed": "2010-06-21 10:55:32", 
+   "student": 141, 
+   "deadline": "2010-06-23 10:26:22"
+  }
+ }, 
+ {
+  "pk": 144, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-25 10:35:17", 
+   "date_viewed": "2010-06-21 10:49:34", 
+   "student": 143, 
+   "deadline": "2010-06-23 10:35:17"
+  }
+ }, 
+ {
+  "pk": 146, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:01:45", 
+   "date_created": "2010-03-25 11:43:21", 
+   "date_viewed": "2010-06-21 10:47:39", 
+   "student": 145, 
+   "deadline": "2010-06-23 11:43:21"
+  }
+ }, 
+ {
+  "pk": 148, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:01:38", 
+   "date_created": "2010-03-25 11:59:00", 
+   "date_viewed": "2010-06-21 10:45:20", 
+   "student": 147, 
+   "deadline": "2010-06-23 11:59:00"
+  }
+ }, 
+ {
+  "pk": 150, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:02:31", 
+   "date_created": "2010-03-25 12:01:12", 
+   "date_viewed": "2010-06-21 11:05:32", 
+   "student": 149, 
+   "deadline": "2010-06-23 12:01:12"
+  }
+ }, 
+ {
+  "pk": 152, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:44", 
+   "date_created": "2010-03-25 13:52:38", 
+   "date_viewed": "2010-06-21 10:39:46", 
+   "student": 151, 
+   "deadline": "2010-06-23 13:52:38"
+  }
+ }, 
+ {
+  "pk": 154, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:02:25", 
+   "date_created": "2010-03-25 13:59:43", 
+   "date_viewed": "2010-06-21 10:59:35", 
+   "student": 153, 
+   "deadline": "2010-06-23 13:59:43"
+  }
+ }, 
+ {
+  "pk": 156, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:40:37", 
+   "date_created": "2010-03-25 14:11:55", 
+   "date_viewed": "2010-06-21 10:37:04", 
+   "student": 155, 
+   "deadline": "2010-06-23 14:11:55"
+  }
+ }, 
+ {
+  "pk": 158, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:02:46", 
+   "date_created": "2010-03-25 14:59:57", 
+   "date_viewed": "2010-06-21 11:09:15", 
+   "student": 157, 
+   "deadline": "2010-06-23 14:59:57"
+  }
+ }, 
+ {
+  "pk": 160, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:02:58", 
+   "date_created": "2010-03-25 15:18:07", 
+   "date_viewed": "2010-06-21 11:11:30", 
+   "student": 159, 
+   "deadline": "2010-06-23 15:18:07"
+  }
+ }, 
+ {
+  "pk": 162, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:40", 
+   "date_created": "2010-03-25 15:27:40", 
+   "date_viewed": "2010-06-21 11:14:45", 
+   "student": 161, 
+   "deadline": "2010-06-23 15:27:40"
+  }
+ }, 
+ {
+  "pk": 164, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-06-21 11:38:15", 
+   "date_created": "2010-03-25 15:37:33", 
+   "date_viewed": "2010-06-21 11:16:57", 
+   "student": 163, 
+   "deadline": "2010-06-23 15:37:33"
+  }
+ }, 
+ {
+  "pk": 166, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:03:58", 
+   "date_created": "2010-03-25 15:50:14", 
+   "date_viewed": "2010-06-21 11:43:56", 
+   "student": 165, 
+   "deadline": "2010-06-23 15:50:14"
+  }
+ }, 
+ {
+  "pk": 168, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:03:04", 
+   "date_created": "2010-03-25 16:03:38", 
+   "date_viewed": "2010-06-21 11:41:55", 
+   "student": 167, 
+   "deadline": "2010-06-23 16:03:38"
+  }
+ }, 
+ {
+  "pk": 170, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-25 16:19:46", 
+   "date_viewed": null, 
+   "student": 169, 
+   "deadline": "2010-06-23 16:19:46"
+  }
+ }, 
+ {
+  "pk": 172, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:04:05", 
+   "date_created": "2010-03-25 16:26:25", 
+   "date_viewed": "2010-06-21 11:51:54", 
+   "student": 171, 
+   "deadline": "2010-06-23 16:26:25"
+  }
+ }, 
+ {
+  "pk": 174, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:04:23", 
+   "date_created": "2010-03-26 09:03:42", 
+   "date_viewed": "2010-06-21 11:56:28", 
+   "student": 173, 
+   "deadline": "2010-06-24 09:03:42"
+  }
+ }, 
+ {
+  "pk": 176, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:05:00", 
+   "date_created": "2010-03-26 09:29:01", 
+   "date_viewed": "2010-06-21 11:59:47", 
+   "student": 175, 
+   "deadline": "2010-06-24 09:29:00"
+  }
+ }, 
+ {
+  "pk": 178, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 09:50:22", 
+   "date_viewed": null, 
+   "student": 177, 
+   "deadline": "2010-06-24 09:50:22"
+  }
+ }, 
+ {
+  "pk": 180, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:05:16", 
+   "date_created": "2010-03-26 10:10:51", 
+   "date_viewed": "2010-06-21 12:09:07", 
+   "student": 179, 
+   "deadline": "2010-06-24 10:10:51"
+  }
+ }, 
+ {
+  "pk": 182, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:40:00", 
+   "date_created": "2010-03-26 10:43:30", 
+   "date_viewed": "2010-06-21 12:12:41", 
+   "student": 181, 
+   "deadline": "2010-06-24 10:43:30"
+  }
+ }, 
+ {
+  "pk": 184, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 10:52:18", 
+   "date_viewed": null, 
+   "student": 183, 
+   "deadline": "2010-06-24 10:52:18"
+  }
+ }, 
+ {
+  "pk": 186, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 11:07:57", 
+   "date_viewed": "2010-06-21 12:15:07", 
+   "student": 185, 
+   "deadline": "2010-06-24 11:07:57"
+  }
+ }, 
+ {
+  "pk": 188, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 11:17:10", 
+   "date_viewed": null, 
+   "student": 187, 
+   "deadline": "2010-06-24 11:17:10"
+  }
+ }, 
+ {
+  "pk": 190, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 11:32:33", 
+   "date_viewed": "2010-06-21 12:16:37", 
+   "student": 189, 
+   "deadline": "2010-06-24 11:32:33"
+  }
+ }, 
+ {
+  "pk": 194, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 11:47:23", 
+   "date_viewed": null, 
+   "student": 193, 
+   "deadline": "2010-06-24 11:47:23"
+  }
+ }, 
+ {
+  "pk": 196, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:09:41", 
+   "date_created": "2010-03-26 13:31:37", 
+   "date_viewed": "2010-06-21 12:17:42", 
+   "student": 195, 
+   "deadline": "2010-06-24 13:31:37"
+  }
+ }, 
+ {
+  "pk": 198, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 13:40:13", 
+   "date_viewed": null, 
+   "student": 197, 
+   "deadline": "2010-06-24 13:40:13"
+  }
+ }, 
+ {
+  "pk": 200, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:09:48", 
+   "date_created": "2010-03-26 13:45:59", 
+   "date_viewed": "2010-06-21 12:19:07", 
+   "student": 199, 
+   "deadline": "2010-06-24 13:45:59"
+  }
+ }, 
+ {
+  "pk": 202, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:09:56", 
+   "date_created": "2010-03-26 14:00:47", 
+   "date_viewed": "2010-06-21 12:20:53", 
+   "student": 201, 
+   "deadline": "2010-06-24 14:00:47"
+  }
+ }, 
+ {
+  "pk": 204, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:10:11", 
+   "date_created": "2010-03-26 14:09:39", 
+   "date_viewed": "2010-06-21 12:27:30", 
+   "student": 203, 
+   "deadline": "2010-06-24 14:09:39"
+  }
+ }, 
+ {
+  "pk": 208, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:05:07", 
+   "date_created": "2010-03-26 14:17:23", 
+   "date_viewed": "2010-06-21 12:06:37", 
+   "student": 207, 
+   "deadline": "2010-06-24 14:17:23"
+  }
+ }, 
+ {
+  "pk": 210, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:33", 
+   "date_created": "2010-03-26 15:28:01", 
+   "date_viewed": "2010-06-21 12:22:35", 
+   "student": 209, 
+   "deadline": "2010-06-24 15:28:01"
+  }
+ }, 
+ {
+  "pk": 212, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:38", 
+   "date_created": "2010-03-26 15:33:15", 
+   "date_viewed": "2010-06-21 12:23:56", 
+   "student": 211, 
+   "deadline": "2010-06-24 15:33:15"
+  }
+ }, 
+ {
+  "pk": 215, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 15:56:38", 
+   "date_viewed": "2010-06-21 12:31:07", 
+   "student": 214, 
+   "deadline": "2010-06-24 15:56:38"
+  }
+ }, 
+ {
+  "pk": 217, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-26 16:04:10", 
+   "date_viewed": null, 
+   "student": 216, 
+   "deadline": "2010-06-24 16:04:10"
+  }
+ }, 
+ {
+  "pk": 219, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:44", 
+   "date_created": "2010-03-26 16:16:39", 
+   "date_viewed": "2010-06-21 12:25:36", 
+   "student": 218, 
+   "deadline": "2010-06-24 16:16:39"
+  }
+ }, 
+ {
+  "pk": 221, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:12:03", 
+   "date_created": "2010-03-26 16:23:01", 
+   "date_viewed": "2010-06-21 12:28:55", 
+   "student": 220, 
+   "deadline": "2010-06-24 16:23:01"
+  }
+ }, 
+ {
+  "pk": 223, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:32:02", 
+   "date_created": "2010-03-29 09:47:30", 
+   "date_viewed": "2010-06-21 14:02:42", 
+   "student": 222, 
+   "deadline": "2010-06-27 09:47:30"
+  }
+ }, 
+ {
+  "pk": 225, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:32:29", 
+   "date_created": "2010-03-29 10:01:50", 
+   "date_viewed": "2010-06-21 14:08:17", 
+   "student": 224, 
+   "deadline": "2010-06-27 10:01:50"
+  }
+ }, 
+ {
+  "pk": 227, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:31:19", 
+   "date_created": "2010-03-29 10:07:54", 
+   "date_viewed": "2010-06-21 14:05:07", 
+   "student": 226, 
+   "deadline": "2010-06-27 10:07:54"
+  }
+ }, 
+ {
+  "pk": 229, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 10:14:02", 
+   "date_viewed": null, 
+   "student": 228, 
+   "deadline": "2010-06-27 10:14:02"
+  }
+ }, 
+ {
+  "pk": 231, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 10:23:50", 
+   "date_viewed": "2010-06-21 14:21:47", 
+   "student": 230, 
+   "deadline": "2010-06-27 10:23:50"
+  }
+ }, 
+ {
+  "pk": 233, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:18:27", 
+   "date_created": "2010-03-29 10:35:04", 
+   "date_viewed": "2010-06-21 13:42:21", 
+   "student": 232, 
+   "deadline": "2010-06-27 10:35:04"
+  }
+ }, 
+ {
+  "pk": 235, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:39:02", 
+   "date_created": "2010-03-29 10:44:36", 
+   "date_viewed": "2010-06-21 13:46:03", 
+   "student": 234, 
+   "deadline": "2010-06-27 10:44:36"
+  }
+ }, 
+ {
+  "pk": 237, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:18:12", 
+   "date_created": "2010-03-29 10:54:34", 
+   "date_viewed": "2010-06-21 13:48:53", 
+   "student": 236, 
+   "deadline": "2010-06-27 10:54:34"
+  }
+ }, 
+ {
+  "pk": 239, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:18:38", 
+   "date_created": "2010-03-29 11:06:46", 
+   "date_viewed": "2010-06-21 13:51:16", 
+   "student": 238, 
+   "deadline": "2010-06-27 11:06:46"
+  }
+ }, 
+ {
+  "pk": 241, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:40:05", 
+   "date_created": "2010-03-29 11:14:17", 
+   "date_viewed": "2010-06-21 13:53:35", 
+   "student": 240, 
+   "deadline": "2010-06-27 11:14:17"
+  }
+ }, 
+ {
+  "pk": 243, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:31:07", 
+   "date_created": "2010-03-29 11:20:37", 
+   "date_viewed": "2010-06-21 13:58:04", 
+   "student": 242, 
+   "deadline": "2010-06-27 11:20:37"
+  }
+ }, 
+ {
+  "pk": 245, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 11:28:50", 
+   "date_viewed": "2010-06-21 13:55:29", 
+   "student": 244, 
+   "deadline": "2010-06-27 11:28:50"
+  }
+ }, 
+ {
+  "pk": 248, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:13", 
+   "date_created": "2010-03-29 11:38:05", 
+   "date_viewed": "2010-06-21 14:18:45", 
+   "student": 247, 
+   "deadline": "2010-06-27 11:38:05"
+  }
+ }, 
+ {
+  "pk": 250, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:17:54", 
+   "date_created": "2010-03-29 13:55:04", 
+   "date_viewed": "2010-06-21 13:38:04", 
+   "student": 249, 
+   "deadline": "2010-06-27 13:55:04"
+  }
+ }, 
+ {
+  "pk": 252, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 14:04:38", 
+   "date_viewed": "2010-06-21 13:43:56", 
+   "student": 251, 
+   "deadline": "2010-06-27 14:04:38"
+  }
+ }, 
+ {
+  "pk": 254, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:16:53", 
+   "date_created": "2010-03-29 14:12:13", 
+   "date_viewed": "2010-06-21 13:29:23", 
+   "student": 253, 
+   "deadline": "2010-06-27 14:12:13"
+  }
+ }, 
+ {
+  "pk": 256, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:17:00", 
+   "date_created": "2010-03-29 15:08:08", 
+   "date_viewed": "2010-06-21 13:30:40", 
+   "student": 255, 
+   "deadline": "2010-06-27 15:08:08"
+  }
+ }, 
+ {
+  "pk": 258, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:17:12", 
+   "date_created": "2010-03-29 15:28:40", 
+   "date_viewed": "2010-06-21 13:23:33", 
+   "student": 257, 
+   "deadline": "2010-06-27 15:28:40"
+  }
+ }, 
+ {
+  "pk": 260, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:13:45", 
+   "date_created": "2010-03-29 15:43:30", 
+   "date_viewed": "2010-06-21 12:42:53", 
+   "student": 259, 
+   "deadline": "2010-06-27 15:43:30"
+  }
+ }, 
+ {
+  "pk": 262, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 15:54:51", 
+   "date_viewed": null, 
+   "student": 261, 
+   "deadline": "2010-06-27 15:54:51"
+  }
+ }, 
+ {
+  "pk": 264, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:12:14", 
+   "date_created": "2010-03-29 16:01:23", 
+   "date_viewed": "2010-06-21 12:34:16", 
+   "student": 263, 
+   "deadline": "2010-06-27 16:01:23"
+  }
+ }, 
+ {
+  "pk": 266, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:12:25", 
+   "date_created": "2010-03-29 16:07:52", 
+   "date_viewed": "2010-06-21 12:36:10", 
+   "student": 265, 
+   "deadline": "2010-06-27 16:07:52"
+  }
+ }, 
+ {
+  "pk": 268, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-29 16:12:01", 
+   "date_viewed": "2010-06-21 12:39:38", 
+   "student": 267, 
+   "deadline": "2010-06-27 16:12:01"
+  }
+ }, 
+ {
+  "pk": 270, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:17:06", 
+   "date_created": "2010-03-29 16:19:37", 
+   "date_viewed": "2010-06-21 13:32:50", 
+   "student": 269, 
+   "deadline": "2010-06-27 16:19:37"
+  }
+ }, 
+ {
+  "pk": 276, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:35:07", 
+   "date_created": "2010-03-30 11:25:30", 
+   "date_viewed": "2010-06-21 14:46:31", 
+   "student": 275, 
+   "deadline": "2010-06-28 11:25:30"
+  }
+ }, 
+ {
+  "pk": 278, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:32:55", 
+   "date_created": "2010-03-30 11:50:38", 
+   "date_viewed": "2010-06-21 14:26:14", 
+   "student": 277, 
+   "deadline": "2010-06-28 11:50:38"
+  }
+ }, 
+ {
+  "pk": 280, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:33:09", 
+   "date_created": "2010-03-30 11:57:27", 
+   "date_viewed": "2010-06-21 14:28:47", 
+   "student": 279, 
+   "deadline": "2010-06-28 11:57:27"
+  }
+ }, 
+ {
+  "pk": 282, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:34:05", 
+   "date_created": "2010-03-30 14:09:46", 
+   "date_viewed": "2010-06-21 14:32:28", 
+   "student": 281, 
+   "deadline": "2010-06-28 14:09:46"
+  }
+ }, 
+ {
+  "pk": 284, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:34:26", 
+   "date_created": "2010-03-30 14:52:41", 
+   "date_viewed": "2010-06-21 14:35:15", 
+   "student": 283, 
+   "deadline": "2010-06-28 14:52:41"
+  }
+ }, 
+ {
+  "pk": 286, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-30 15:23:00", 
+   "date_viewed": null, 
+   "student": 285, 
+   "deadline": "2010-06-28 15:23:00"
+  }
+ }, 
+ {
+  "pk": 288, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-30 15:32:03", 
+   "date_viewed": null, 
+   "student": 287, 
+   "deadline": "2010-06-28 15:32:03"
+  }
+ }, 
+ {
+  "pk": 290, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:34:34", 
+   "date_created": "2010-03-30 15:47:31", 
+   "date_viewed": "2010-06-21 14:36:41", 
+   "student": 289, 
+   "deadline": "2010-06-28 15:47:31"
+  }
+ }, 
+ {
+  "pk": 292, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:34:51", 
+   "date_created": "2010-03-30 16:00:12", 
+   "date_viewed": "2010-06-21 14:39:15", 
+   "student": 291, 
+   "deadline": "2010-06-28 16:00:12"
+  }
+ }, 
+ {
+  "pk": 294, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:35:00", 
+   "date_created": "2010-03-30 16:24:52", 
+   "date_viewed": "2010-06-21 14:40:54", 
+   "student": 293, 
+   "deadline": "2010-06-28 16:24:52"
+  }
+ }, 
+ {
+  "pk": 296, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:24", 
+   "date_created": "2010-03-30 16:27:03", 
+   "date_viewed": "2010-06-21 14:42:16", 
+   "student": 295, 
+   "deadline": "2010-06-28 16:27:03"
+  }
+ }, 
+ {
+  "pk": 298, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:35:52", 
+   "date_created": "2010-03-31 09:53:06", 
+   "date_viewed": "2010-06-21 14:51:39", 
+   "student": 297, 
+   "deadline": "2010-06-29 09:53:06"
+  }
+ }, 
+ {
+  "pk": 300, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-31 10:17:03", 
+   "date_viewed": "2010-06-21 14:53:38", 
+   "student": 299, 
+   "deadline": "2010-06-29 10:17:03"
+  }
+ }, 
+ {
+  "pk": 302, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:12", 
+   "date_created": "2010-03-31 10:26:34", 
+   "date_viewed": "2010-06-21 14:56:02", 
+   "student": 301, 
+   "deadline": "2010-06-29 10:26:34"
+  }
+ }, 
+ {
+  "pk": 304, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-31 10:31:42", 
+   "date_viewed": "2010-06-21 14:58:29", 
+   "student": 303, 
+   "deadline": "2010-06-29 10:31:42"
+  }
+ }, 
+ {
+  "pk": 306, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:20", 
+   "date_created": "2010-03-31 10:51:55", 
+   "date_viewed": "2010-06-21 15:00:50", 
+   "student": 305, 
+   "deadline": "2010-06-29 10:51:55"
+  }
+ }, 
+ {
+  "pk": 308, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:30", 
+   "date_created": "2010-03-31 11:02:17", 
+   "date_viewed": "2010-06-21 15:02:33", 
+   "student": 307, 
+   "deadline": "2010-06-29 11:02:17"
+  }
+ }, 
+ {
+  "pk": 310, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:36", 
+   "date_created": "2010-03-31 11:09:53", 
+   "date_viewed": "2010-06-21 15:03:56", 
+   "student": 309, 
+   "deadline": "2010-06-29 11:09:53"
+  }
+ }, 
+ {
+  "pk": 312, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:40", 
+   "date_created": "2010-03-31 11:20:04", 
+   "date_viewed": "2010-06-21 15:07:26", 
+   "student": 311, 
+   "deadline": "2010-06-29 11:20:04"
+  }
+ }, 
+ {
+  "pk": 314, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-31 11:28:01", 
+   "date_viewed": null, 
+   "student": 313, 
+   "deadline": "2010-06-29 11:28:01"
+  }
+ }, 
+ {
+  "pk": 316, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:33", 
+   "date_created": "2010-03-31 11:39:26", 
+   "date_viewed": "2010-06-21 15:05:57", 
+   "student": 315, 
+   "deadline": "2010-06-29 11:39:26"
+  }
+ }, 
+ {
+  "pk": 318, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-03-31 11:45:31", 
+   "date_viewed": "2010-06-21 15:08:45", 
+   "student": 317, 
+   "deadline": "2010-06-29 11:45:31"
+  }
+ }, 
+ {
+  "pk": 320, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:49", 
+   "date_created": "2010-03-31 11:51:55", 
+   "date_viewed": "2010-06-21 15:10:05", 
+   "student": 319, 
+   "deadline": "2010-06-29 11:51:55"
+  }
+ }, 
+ {
+  "pk": 322, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:36:54", 
+   "date_created": "2010-03-31 12:11:20", 
+   "date_viewed": "2010-06-21 15:11:22", 
+   "student": 321, 
+   "deadline": "2010-06-29 12:11:20"
+  }
+ }, 
+ {
+  "pk": 324, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:37:02", 
+   "date_created": "2010-03-31 12:15:07", 
+   "date_viewed": "2010-06-21 15:12:32", 
+   "student": 323, 
+   "deadline": "2010-06-29 12:15:07"
+  }
+ }, 
+ {
+  "pk": 326, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-02 16:20:52", 
+   "date_viewed": null, 
+   "student": 325, 
+   "deadline": "2010-07-01 16:20:52"
+  }
+ }, 
+ {
+  "pk": 328, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 10:37:17", 
+   "date_viewed": null, 
+   "student": 327, 
+   "deadline": "2010-07-02 10:37:17"
+  }
+ }, 
+ {
+  "pk": 330, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 11:26:14", 
+   "date_viewed": null, 
+   "student": 329, 
+   "deadline": "2010-07-02 11:26:14"
+  }
+ }, 
+ {
+  "pk": 332, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 11:37:21", 
+   "date_viewed": null, 
+   "student": 331, 
+   "deadline": "2010-07-02 11:37:21"
+  }
+ }, 
+ {
+  "pk": 334, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:37:19", 
+   "date_created": "2010-04-03 11:43:43", 
+   "date_viewed": "2010-06-21 15:14:27", 
+   "student": 333, 
+   "deadline": "2010-07-02 11:43:43"
+  }
+ }, 
+ {
+  "pk": 336, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 11:51:59", 
+   "date_viewed": null, 
+   "student": 335, 
+   "deadline": "2010-07-02 11:51:59"
+  }
+ }, 
+ {
+  "pk": 338, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 11:56:52", 
+   "date_viewed": null, 
+   "student": 337, 
+   "deadline": "2010-07-02 11:56:52"
+  }
+ }, 
+ {
+  "pk": 340, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:37:31", 
+   "date_created": "2010-04-03 12:11:40", 
+   "date_viewed": "2010-06-21 15:16:53", 
+   "student": 339, 
+   "deadline": "2010-07-02 12:11:40"
+  }
+ }, 
+ {
+  "pk": 342, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-03 12:18:59", 
+   "date_viewed": "2010-06-21 15:20:30", 
+   "student": 341, 
+   "deadline": "2010-07-02 12:18:59"
+  }
+ }, 
+ {
+  "pk": 344, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:39:38", 
+   "date_created": "2010-04-03 12:24:51", 
+   "date_viewed": "2010-06-21 15:18:45", 
+   "student": 343, 
+   "deadline": "2010-07-02 12:24:51"
+  }
+ }, 
+ {
+  "pk": 346, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 10:06:56", 
+   "date_viewed": null, 
+   "student": 345, 
+   "deadline": "2010-07-04 10:06:56"
+  }
+ }, 
+ {
+  "pk": 348, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 10:13:17", 
+   "date_viewed": null, 
+   "student": 347, 
+   "deadline": "2010-07-04 10:13:17"
+  }
+ }, 
+ {
+  "pk": 350, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 11:35:41", 
+   "date_viewed": null, 
+   "student": 349, 
+   "deadline": "2010-07-04 11:35:41"
+  }
+ }, 
+ {
+  "pk": 352, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 11:41:44", 
+   "date_viewed": null, 
+   "student": 351, 
+   "deadline": "2010-07-04 11:41:44"
+  }
+ }, 
+ {
+  "pk": 354, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 11:59:09", 
+   "date_viewed": null, 
+   "student": 353, 
+   "deadline": "2010-07-04 11:59:09"
+  }
+ }, 
+ {
+  "pk": 356, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 13:23:33", 
+   "date_viewed": null, 
+   "student": 355, 
+   "deadline": "2010-07-04 13:23:33"
+  }
+ }, 
+ {
+  "pk": 358, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 13:37:40", 
+   "date_viewed": null, 
+   "student": 357, 
+   "deadline": "2010-07-04 13:37:40"
+  }
+ }, 
+ {
+  "pk": 370, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 14:07:14", 
+   "date_viewed": null, 
+   "student": 369, 
+   "deadline": "2010-07-04 14:07:14"
+  }
+ }, 
+ {
+  "pk": 372, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-04-05 14:19:22", 
+   "date_viewed": null, 
+   "student": 371, 
+   "deadline": "2010-07-04 14:19:22"
+  }
+ }, 
+ {
+  "pk": 403, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-01 08:37:58", 
+   "date_created": "2010-06-21 08:49:10", 
+   "date_viewed": "2010-06-21 09:03:32", 
+   "student": 402, 
+   "deadline": "2010-09-19 08:49:10"
+  }
+ }, 
+ {
+  "pk": 423, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:11:19", 
+   "date_created": "2010-06-21 09:05:53", 
+   "date_viewed": "2010-06-21 09:25:26", 
+   "student": 422, 
+   "deadline": "2010-09-19 09:05:53"
+  }
+ }, 
+ {
+  "pk": 430, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": "2010-10-02 03:38:50", 
+   "date_created": "2010-06-21 09:10:17", 
+   "date_viewed": "2010-06-21 11:53:29", 
+   "student": 429, 
+   "deadline": "2010-09-19 09:10:17"
+  }
+ }, 
+ {
+  "pk": 685, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-06-21 14:08:54", 
+   "date_viewed": null, 
+   "student": 684, 
+   "deadline": "2010-09-19 14:08:54"
+  }
+ }, 
+ {
+  "pk": 782, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 01:54:48", 
+   "date_viewed": null, 
+   "student": 781, 
+   "deadline": "2010-12-22 01:54:48"
+  }
+ }, 
+ {
+  "pk": 784, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 02:17:07", 
+   "date_viewed": null, 
+   "student": 783, 
+   "deadline": "2010-12-22 02:17:07"
+  }
+ }, 
+ {
+  "pk": 786, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 03:42:48", 
+   "date_viewed": null, 
+   "student": 785, 
+   "deadline": "2010-12-22 03:42:48"
+  }
+ }, 
+ {
+  "pk": 788, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 04:10:01", 
+   "date_viewed": null, 
+   "student": 787, 
+   "deadline": "2010-12-22 04:10:01"
+  }
+ }, 
+ {
+  "pk": 790, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 04:18:25", 
+   "date_viewed": null, 
+   "student": 789, 
+   "deadline": "2010-12-22 04:18:25"
+  }
+ }, 
+ {
+  "pk": 792, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 04:36:52", 
+   "date_viewed": null, 
+   "student": 791, 
+   "deadline": "2010-12-22 04:36:52"
+  }
+ }, 
+ {
+  "pk": 794, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 04:58:23", 
+   "date_viewed": null, 
+   "student": 793, 
+   "deadline": "2010-12-22 04:58:23"
+  }
+ }, 
+ {
+  "pk": 796, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 06:44:41", 
+   "date_viewed": null, 
+   "student": 795, 
+   "deadline": "2010-12-22 06:44:41"
+  }
+ }, 
+ {
+  "pk": 798, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-23 06:49:10", 
+   "date_viewed": null, 
+   "student": 797, 
+   "deadline": "2010-12-22 06:49:10"
+  }
+ }, 
+ {
+  "pk": 801, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-24 02:59:10", 
+   "date_viewed": null, 
+   "student": 800, 
+   "deadline": "2010-12-23 02:59:10"
+  }
+ }, 
+ {
+  "pk": 803, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-09-30 09:04:28", 
+   "date_viewed": null, 
+   "student": 802, 
+   "deadline": "2010-12-29 09:04:28"
+  }
+ }, 
+ {
+  "pk": 805, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 03:21:12", 
+   "date_viewed": null, 
+   "student": 804, 
+   "deadline": "2011-01-02 03:21:12"
+  }
+ }, 
+ {
+  "pk": 807, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 03:49:41", 
+   "date_viewed": null, 
+   "student": 806, 
+   "deadline": "2011-01-02 03:49:41"
+  }
+ }, 
+ {
+  "pk": 809, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 03:59:10", 
+   "date_viewed": null, 
+   "student": 808, 
+   "deadline": "2011-01-02 03:59:10"
+  }
+ }, 
+ {
+  "pk": 812, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 04:13:11", 
+   "date_viewed": null, 
+   "student": 811, 
+   "deadline": "2011-01-02 04:13:11"
+  }
+ }, 
+ {
+  "pk": 814, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 04:22:26", 
+   "date_viewed": null, 
+   "student": 813, 
+   "deadline": "2011-01-02 04:22:26"
+  }
+ }, 
+ {
+  "pk": 816, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 04:37:11", 
+   "date_viewed": null, 
+   "student": 815, 
+   "deadline": "2011-01-02 04:37:11"
+  }
+ }, 
+ {
+  "pk": 818, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-04 04:43:51", 
+   "date_viewed": null, 
+   "student": 817, 
+   "deadline": "2011-01-02 04:43:51"
+  }
+ }, 
+ {
+  "pk": 820, 
+  "model": "finance.invoice", 
+  "fields": {
+   "date_paid": null, 
+   "date_created": "2010-10-05 06:59:48", 
+   "date_viewed": null, 
+   "student": 819, 
+   "deadline": "2011-01-03 06:59:48"
+  }
+ }
+]

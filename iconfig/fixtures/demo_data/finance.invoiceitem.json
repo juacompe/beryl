@@ -1,0 +1,3467 @@
+[
+ {
+  "pk": 375, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 9
+  }
+ }, 
+ {
+  "pk": 376, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 22
+  }
+ }, 
+ {
+  "pk": 377, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 7150, 
+   "name": "Transportation", 
+   "invoice": 71
+  }
+ }, 
+ {
+  "pk": 378, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 22
+  }
+ }, 
+ {
+  "pk": 379, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 28
+  }
+ }, 
+ {
+  "pk": 380, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 28
+  }
+ }, 
+ {
+  "pk": 381, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 32
+  }
+ }, 
+ {
+  "pk": 382, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 32
+  }
+ }, 
+ {
+  "pk": 383, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 9
+  }
+ }, 
+ {
+  "pk": 384, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 33000, 
+   "name": "Fees", 
+   "invoice": 34
+  }
+ }, 
+ {
+  "pk": 385, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 34
+  }
+ }, 
+ {
+  "pk": 386, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 26
+  }
+ }, 
+ {
+  "pk": 389, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 26
+  }
+ }, 
+ {
+  "pk": 390, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 26
+  }
+ }, 
+ {
+  "pk": 391, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 36
+  }
+ }, 
+ {
+  "pk": 392, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 36
+  }
+ }, 
+ {
+  "pk": 393, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 40
+  }
+ }, 
+ {
+  "pk": 394, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 40
+  }
+ }, 
+ {
+  "pk": 395, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 42
+  }
+ }, 
+ {
+  "pk": 396, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 42
+  }
+ }, 
+ {
+  "pk": 397, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 60
+  }
+ }, 
+ {
+  "pk": 398, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 60
+  }
+ }, 
+ {
+  "pk": 399, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 58
+  }
+ }, 
+ {
+  "pk": 400, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 58
+  }
+ }, 
+ {
+  "pk": 401, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4900, 
+   "name": "Computer Class", 
+   "invoice": 58
+  }
+ }, 
+ {
+  "pk": 404, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 56
+  }
+ }, 
+ {
+  "pk": 405, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 56
+  }
+ }, 
+ {
+  "pk": 406, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 56
+  }
+ }, 
+ {
+  "pk": 407, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 50
+  }
+ }, 
+ {
+  "pk": 408, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 50
+  }
+ }, 
+ {
+  "pk": 409, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 52
+  }
+ }, 
+ {
+  "pk": 410, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 52
+  }
+ }, 
+ {
+  "pk": 412, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 44
+  }
+ }, 
+ {
+  "pk": 413, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 44
+  }
+ }, 
+ {
+  "pk": 414, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 44
+  }
+ }, 
+ {
+  "pk": 415, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 7150, 
+   "name": "Transportation", 
+   "invoice": 46
+  }
+ }, 
+ {
+  "pk": 416, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 46
+  }
+ }, 
+ {
+  "pk": 417, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 46
+  }
+ }, 
+ {
+  "pk": 418, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 403
+  }
+ }, 
+ {
+  "pk": 419, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 28000, 
+   "name": "Fees (3-Day Programme)", 
+   "invoice": 403
+  }
+ }, 
+ {
+  "pk": 420, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 62
+  }
+ }, 
+ {
+  "pk": 421, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 62
+  }
+ }, 
+ {
+  "pk": 424, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 62
+  }
+ }, 
+ {
+  "pk": 425, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 71
+  }
+ }, 
+ {
+  "pk": 426, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 71
+  }
+ }, 
+ {
+  "pk": 427, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 68
+  }
+ }, 
+ {
+  "pk": 428, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 68
+  }
+ }, 
+ {
+  "pk": 431, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 79
+  }
+ }, 
+ {
+  "pk": 432, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 79
+  }
+ }, 
+ {
+  "pk": 434, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 2000, 
+   "name": "Instructional Materials", 
+   "invoice": 423
+  }
+ }, 
+ {
+  "pk": 435, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 38000, 
+   "name": "Fees", 
+   "invoice": 423
+  }
+ }, 
+ {
+  "pk": 436, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 77
+  }
+ }, 
+ {
+  "pk": 437, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 77
+  }
+ }, 
+ {
+  "pk": 438, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 77
+  }
+ }, 
+ {
+  "pk": 439, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 450, 
+   "name": "School Uniform", 
+   "invoice": 77
+  }
+ }, 
+ {
+  "pk": 440, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 450, 
+   "name": "P.E. Uniform", 
+   "invoice": 77
+  }
+ }, 
+ {
+  "pk": 441, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 75
+  }
+ }, 
+ {
+  "pk": 442, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 75
+  }
+ }, 
+ {
+  "pk": 443, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 86
+  }
+ }, 
+ {
+  "pk": 444, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 86
+  }
+ }, 
+ {
+  "pk": 445, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 120
+  }
+ }, 
+ {
+  "pk": 446, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 120
+  }
+ }, 
+ {
+  "pk": 447, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 124
+  }
+ }, 
+ {
+  "pk": 448, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 124
+  }
+ }, 
+ {
+  "pk": 449, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 450, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 451, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 452, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 453, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 454, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Ballet Lesson", 
+   "invoice": 122
+  }
+ }, 
+ {
+  "pk": 455, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 81
+  }
+ }, 
+ {
+  "pk": 456, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 81
+  }
+ }, 
+ {
+  "pk": 457, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 40000, 
+   "name": "Fees", 
+   "invoice": 84
+  }
+ }, 
+ {
+  "pk": 458, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3000, 
+   "name": "Instructional Materials", 
+   "invoice": 84
+  }
+ }, 
+ {
+  "pk": 459, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 126
+  }
+ }, 
+ {
+  "pk": 460, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 126
+  }
+ }, 
+ {
+  "pk": 461, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 128
+  }
+ }, 
+ {
+  "pk": 462, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 128
+  }
+ }, 
+ {
+  "pk": 463, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 130
+  }
+ }, 
+ {
+  "pk": 464, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 130
+  }
+ }, 
+ {
+  "pk": 465, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Ballet Lesson", 
+   "invoice": 130
+  }
+ }, 
+ {
+  "pk": 466, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 132
+  }
+ }, 
+ {
+  "pk": 467, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 132
+  }
+ }, 
+ {
+  "pk": 468, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 132
+  }
+ }, 
+ {
+  "pk": 469, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 136
+  }
+ }, 
+ {
+  "pk": 470, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 136
+  }
+ }, 
+ {
+  "pk": 471, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 136
+  }
+ }, 
+ {
+  "pk": 472, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 134
+  }
+ }, 
+ {
+  "pk": 473, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 134
+  }
+ }, 
+ {
+  "pk": 474, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 134
+  }
+ }, 
+ {
+  "pk": 475, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 134
+  }
+ }, 
+ {
+  "pk": 476, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 90
+  }
+ }, 
+ {
+  "pk": 477, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 90
+  }
+ }, 
+ {
+  "pk": 478, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 90
+  }
+ }, 
+ {
+  "pk": 479, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 90
+  }
+ }, 
+ {
+  "pk": 480, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 116
+  }
+ }, 
+ {
+  "pk": 481, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 116
+  }
+ }, 
+ {
+  "pk": 482, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 7150, 
+   "name": "Transportation", 
+   "invoice": 116
+  }
+ }, 
+ {
+  "pk": 483, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 116
+  }
+ }, 
+ {
+  "pk": 484, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 93
+  }
+ }, 
+ {
+  "pk": 485, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 93
+  }
+ }, 
+ {
+  "pk": 486, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 93
+  }
+ }, 
+ {
+  "pk": 487, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Ballet Lesson", 
+   "invoice": 93
+  }
+ }, 
+ {
+  "pk": 488, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 95
+  }
+ }, 
+ {
+  "pk": 489, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 95
+  }
+ }, 
+ {
+  "pk": 490, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 8250, 
+   "name": "Transportation", 
+   "invoice": 95
+  }
+ }, 
+ {
+  "pk": 491, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 88
+  }
+ }, 
+ {
+  "pk": 492, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 88
+  }
+ }, 
+ {
+  "pk": 493, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 88
+  }
+ }, 
+ {
+  "pk": 494, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Ballet Lesson", 
+   "invoice": 88
+  }
+ }, 
+ {
+  "pk": 495, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 97
+  }
+ }, 
+ {
+  "pk": 496, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 97
+  }
+ }, 
+ {
+  "pk": 497, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 16500, 
+   "name": "Transportation", 
+   "invoice": 97
+  }
+ }, 
+ {
+  "pk": 498, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 97
+  }
+ }, 
+ {
+  "pk": 499, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 99
+  }
+ }, 
+ {
+  "pk": 500, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 99
+  }
+ }, 
+ {
+  "pk": 501, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 101
+  }
+ }, 
+ {
+  "pk": 502, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 101
+  }
+ }, 
+ {
+  "pk": 503, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 104
+  }
+ }, 
+ {
+  "pk": 504, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 104
+  }
+ }, 
+ {
+  "pk": 505, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 104
+  }
+ }, 
+ {
+  "pk": 506, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 112
+  }
+ }, 
+ {
+  "pk": 507, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 112
+  }
+ }, 
+ {
+  "pk": 508, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 156
+  }
+ }, 
+ {
+  "pk": 509, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 156
+  }
+ }, 
+ {
+  "pk": 510, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 156
+  }
+ }, 
+ {
+  "pk": 511, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 156
+  }
+ }, 
+ {
+  "pk": 512, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 152
+  }
+ }, 
+ {
+  "pk": 513, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 152
+  }
+ }, 
+ {
+  "pk": 514, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 152
+  }
+ }, 
+ {
+  "pk": 515, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 152
+  }
+ }, 
+ {
+  "pk": 516, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 45000, 
+   "name": "Fees", 
+   "invoice": 114
+  }
+ }, 
+ {
+  "pk": 517, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Instructional Materials", 
+   "invoice": 114
+  }
+ }, 
+ {
+  "pk": 519, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 148
+  }
+ }, 
+ {
+  "pk": 520, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 148
+  }
+ }, 
+ {
+  "pk": 521, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 146
+  }
+ }, 
+ {
+  "pk": 522, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 146
+  }
+ }, 
+ {
+  "pk": 523, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 146
+  }
+ }, 
+ {
+  "pk": 524, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 144
+  }
+ }, 
+ {
+  "pk": 525, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 144
+  }
+ }, 
+ {
+  "pk": 526, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 138
+  }
+ }, 
+ {
+  "pk": 527, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 138
+  }
+ }, 
+ {
+  "pk": 528, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 138
+  }
+ }, 
+ {
+  "pk": 529, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 138
+  }
+ }, 
+ {
+  "pk": 530, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 138
+  }
+ }, 
+ {
+  "pk": 531, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 142
+  }
+ }, 
+ {
+  "pk": 532, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 6600, 
+   "name": "Transportation", 
+   "invoice": 142
+  }
+ }, 
+ {
+  "pk": 533, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 142
+  }
+ }, 
+ {
+  "pk": 534, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 154
+  }
+ }, 
+ {
+  "pk": 535, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 154
+  }
+ }, 
+ {
+  "pk": 536, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 154
+  }
+ }, 
+ {
+  "pk": 537, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 154
+  }
+ }, 
+ {
+  "pk": 538, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 150
+  }
+ }, 
+ {
+  "pk": 539, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 150
+  }
+ }, 
+ {
+  "pk": 540, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 150
+  }
+ }, 
+ {
+  "pk": 541, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 140
+  }
+ }, 
+ {
+  "pk": 542, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 140
+  }
+ }, 
+ {
+  "pk": 543, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 158
+  }
+ }, 
+ {
+  "pk": 544, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 158
+  }
+ }, 
+ {
+  "pk": 545, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 158
+  }
+ }, 
+ {
+  "pk": 546, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 160
+  }
+ }, 
+ {
+  "pk": 547, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 7150, 
+   "name": "Transportation", 
+   "invoice": 160
+  }
+ }, 
+ {
+  "pk": 548, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 160
+  }
+ }, 
+ {
+  "pk": 549, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 162
+  }
+ }, 
+ {
+  "pk": 550, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 162
+  }
+ }, 
+ {
+  "pk": 551, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 164
+  }
+ }, 
+ {
+  "pk": 552, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 164
+  }
+ }, 
+ {
+  "pk": 553, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 164
+  }
+ }, 
+ {
+  "pk": 554, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 168
+  }
+ }, 
+ {
+  "pk": 555, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 168
+  }
+ }, 
+ {
+  "pk": 556, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 168
+  }
+ }, 
+ {
+  "pk": 557, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 166
+  }
+ }, 
+ {
+  "pk": 558, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 166
+  }
+ }, 
+ {
+  "pk": 559, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5500, 
+   "name": "Transportation", 
+   "invoice": 166
+  }
+ }, 
+ {
+  "pk": 560, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 172
+  }
+ }, 
+ {
+  "pk": 561, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 172
+  }
+ }, 
+ {
+  "pk": 562, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 430
+  }
+ }, 
+ {
+  "pk": 563, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 430
+  }
+ }, 
+ {
+  "pk": 564, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 174
+  }
+ }, 
+ {
+  "pk": 565, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 174
+  }
+ }, 
+ {
+  "pk": 566, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 174
+  }
+ }, 
+ {
+  "pk": 567, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 174
+  }
+ }, 
+ {
+  "pk": 568, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 569, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 570, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 571, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 572, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 573, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 176
+  }
+ }, 
+ {
+  "pk": 574, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 208
+  }
+ }, 
+ {
+  "pk": 575, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 208
+  }
+ }, 
+ {
+  "pk": 576, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 180
+  }
+ }, 
+ {
+  "pk": 577, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 180
+  }
+ }, 
+ {
+  "pk": 578, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4900, 
+   "name": "Computer Class", 
+   "invoice": 180
+  }
+ }, 
+ {
+  "pk": 579, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 180
+  }
+ }, 
+ {
+  "pk": 580, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 182
+  }
+ }, 
+ {
+  "pk": 581, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 182
+  }
+ }, 
+ {
+  "pk": 582, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 182
+  }
+ }, 
+ {
+  "pk": 583, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 182
+  }
+ }, 
+ {
+  "pk": 585, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 186
+  }
+ }, 
+ {
+  "pk": 586, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 186
+  }
+ }, 
+ {
+  "pk": 587, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 190
+  }
+ }, 
+ {
+  "pk": 588, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 190
+  }
+ }, 
+ {
+  "pk": 589, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 190
+  }
+ }, 
+ {
+  "pk": 590, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 196
+  }
+ }, 
+ {
+  "pk": 591, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 196
+  }
+ }, 
+ {
+  "pk": 592, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 200
+  }
+ }, 
+ {
+  "pk": 593, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 200
+  }
+ }, 
+ {
+  "pk": 594, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 8250, 
+   "name": "Transportation", 
+   "invoice": 200
+  }
+ }, 
+ {
+  "pk": 595, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 202
+  }
+ }, 
+ {
+  "pk": 596, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 202
+  }
+ }, 
+ {
+  "pk": 597, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 202
+  }
+ }, 
+ {
+  "pk": 598, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 210
+  }
+ }, 
+ {
+  "pk": 599, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 210
+  }
+ }, 
+ {
+  "pk": 600, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 212
+  }
+ }, 
+ {
+  "pk": 601, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 212
+  }
+ }, 
+ {
+  "pk": 602, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 219
+  }
+ }, 
+ {
+  "pk": 603, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 219
+  }
+ }, 
+ {
+  "pk": 604, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 204
+  }
+ }, 
+ {
+  "pk": 605, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 204
+  }
+ }, 
+ {
+  "pk": 606, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 204
+  }
+ }, 
+ {
+  "pk": 607, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 204
+  }
+ }, 
+ {
+  "pk": 608, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 221
+  }
+ }, 
+ {
+  "pk": 609, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 221
+  }
+ }, 
+ {
+  "pk": 610, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 215
+  }
+ }, 
+ {
+  "pk": 611, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 215
+  }
+ }, 
+ {
+  "pk": 612, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 215
+  }
+ }, 
+ {
+  "pk": 613, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 264
+  }
+ }, 
+ {
+  "pk": 614, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 264
+  }
+ }, 
+ {
+  "pk": 615, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 264
+  }
+ }, 
+ {
+  "pk": 616, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 266
+  }
+ }, 
+ {
+  "pk": 617, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 266
+  }
+ }, 
+ {
+  "pk": 618, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 266
+  }
+ }, 
+ {
+  "pk": 619, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 268
+  }
+ }, 
+ {
+  "pk": 620, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 268
+  }
+ }, 
+ {
+  "pk": 621, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 6600, 
+   "name": "Transportation", 
+   "invoice": 268
+  }
+ }, 
+ {
+  "pk": 622, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 260
+  }
+ }, 
+ {
+  "pk": 623, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 260
+  }
+ }, 
+ {
+  "pk": 624, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 260
+  }
+ }, 
+ {
+  "pk": 625, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 260
+  }
+ }, 
+ {
+  "pk": 626, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 260
+  }
+ }, 
+ {
+  "pk": 627, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 258
+  }
+ }, 
+ {
+  "pk": 628, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 258
+  }
+ }, 
+ {
+  "pk": 629, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 258
+  }
+ }, 
+ {
+  "pk": 630, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 254
+  }
+ }, 
+ {
+  "pk": 631, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 254
+  }
+ }, 
+ {
+  "pk": 632, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 256
+  }
+ }, 
+ {
+  "pk": 633, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 256
+  }
+ }, 
+ {
+  "pk": 634, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 270
+  }
+ }, 
+ {
+  "pk": 635, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 270
+  }
+ }, 
+ {
+  "pk": 636, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 637, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 638, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 639, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 640, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 641, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 500, 
+   "name": "School Uniform", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 642, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 500, 
+   "name": "P.E. Uniform", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 643, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 7000, 
+   "name": "Private Tuition", 
+   "invoice": 250
+  }
+ }, 
+ {
+  "pk": 645, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 233
+  }
+ }, 
+ {
+  "pk": 646, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 233
+  }
+ }, 
+ {
+  "pk": 647, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 233
+  }
+ }, 
+ {
+  "pk": 648, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 233
+  }
+ }, 
+ {
+  "pk": 649, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 233
+  }
+ }, 
+ {
+  "pk": 650, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 252
+  }
+ }, 
+ {
+  "pk": 651, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 252
+  }
+ }, 
+ {
+  "pk": 652, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 235
+  }
+ }, 
+ {
+  "pk": 653, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 235
+  }
+ }, 
+ {
+  "pk": 654, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 235
+  }
+ }, 
+ {
+  "pk": 655, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 237
+  }
+ }, 
+ {
+  "pk": 656, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 237
+  }
+ }, 
+ {
+  "pk": 657, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 237
+  }
+ }, 
+ {
+  "pk": 658, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 237
+  }
+ }, 
+ {
+  "pk": 659, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 239
+  }
+ }, 
+ {
+  "pk": 660, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 239
+  }
+ }, 
+ {
+  "pk": 661, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 239
+  }
+ }, 
+ {
+  "pk": 662, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 241
+  }
+ }, 
+ {
+  "pk": 663, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 241
+  }
+ }, 
+ {
+  "pk": 664, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 241
+  }
+ }, 
+ {
+  "pk": 665, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 241
+  }
+ }, 
+ {
+  "pk": 666, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 245
+  }
+ }, 
+ {
+  "pk": 667, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 245
+  }
+ }, 
+ {
+  "pk": 668, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 243
+  }
+ }, 
+ {
+  "pk": 669, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 243
+  }
+ }, 
+ {
+  "pk": 670, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 243
+  }
+ }, 
+ {
+  "pk": 671, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 243
+  }
+ }, 
+ {
+  "pk": 672, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 243
+  }
+ }, 
+ {
+  "pk": 673, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 223
+  }
+ }, 
+ {
+  "pk": 674, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 223
+  }
+ }, 
+ {
+  "pk": 677, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 227
+  }
+ }, 
+ {
+  "pk": 678, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 227
+  }
+ }, 
+ {
+  "pk": 679, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 227
+  }
+ }, 
+ {
+  "pk": 680, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 225
+  }
+ }, 
+ {
+  "pk": 681, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 225
+  }
+ }, 
+ {
+  "pk": 683, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 225
+  }
+ }, 
+ {
+  "pk": 686, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 687, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 688, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5500, 
+   "name": "Transportation", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 689, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 690, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 691, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 692, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 693, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4900, 
+   "name": "Computer Class", 
+   "invoice": 248
+  }
+ }, 
+ {
+  "pk": 694, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 231
+  }
+ }, 
+ {
+  "pk": 695, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 231
+  }
+ }, 
+ {
+  "pk": 696, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 231
+  }
+ }, 
+ {
+  "pk": 697, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 278
+  }
+ }, 
+ {
+  "pk": 698, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 278
+  }
+ }, 
+ {
+  "pk": 700, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 280
+  }
+ }, 
+ {
+  "pk": 701, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 280
+  }
+ }, 
+ {
+  "pk": 702, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 280
+  }
+ }, 
+ {
+  "pk": 703, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 280
+  }
+ }, 
+ {
+  "pk": 704, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 282
+  }
+ }, 
+ {
+  "pk": 705, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 282
+  }
+ }, 
+ {
+  "pk": 706, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 282
+  }
+ }, 
+ {
+  "pk": 707, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 282
+  }
+ }, 
+ {
+  "pk": 708, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 3600, 
+   "name": "Thai Class", 
+   "invoice": 282
+  }
+ }, 
+ {
+  "pk": 709, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 284
+  }
+ }, 
+ {
+  "pk": 710, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 284
+  }
+ }, 
+ {
+  "pk": 711, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 284
+  }
+ }, 
+ {
+  "pk": 712, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 284
+  }
+ }, 
+ {
+  "pk": 713, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 290
+  }
+ }, 
+ {
+  "pk": 714, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 290
+  }
+ }, 
+ {
+  "pk": 715, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 292
+  }
+ }, 
+ {
+  "pk": 716, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 292
+  }
+ }, 
+ {
+  "pk": 717, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 292
+  }
+ }, 
+ {
+  "pk": 718, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4900, 
+   "name": "Computer Class", 
+   "invoice": 292
+  }
+ }, 
+ {
+  "pk": 719, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 294
+  }
+ }, 
+ {
+  "pk": 720, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 294
+  }
+ }, 
+ {
+  "pk": 721, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 294
+  }
+ }, 
+ {
+  "pk": 722, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 296
+  }
+ }, 
+ {
+  "pk": 723, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 296
+  }
+ }, 
+ {
+  "pk": 724, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 276
+  }
+ }, 
+ {
+  "pk": 725, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 276
+  }
+ }, 
+ {
+  "pk": 726, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 276
+  }
+ }, 
+ {
+  "pk": 727, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 276
+  }
+ }, 
+ {
+  "pk": 728, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 298
+  }
+ }, 
+ {
+  "pk": 729, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 298
+  }
+ }, 
+ {
+  "pk": 730, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 298
+  }
+ }, 
+ {
+  "pk": 731, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 300
+  }
+ }, 
+ {
+  "pk": 732, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 300
+  }
+ }, 
+ {
+  "pk": 733, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 300
+  }
+ }, 
+ {
+  "pk": 734, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4900, 
+   "name": "Computer Class", 
+   "invoice": 300
+  }
+ }, 
+ {
+  "pk": 735, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 302
+  }
+ }, 
+ {
+  "pk": 736, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 302
+  }
+ }, 
+ {
+  "pk": 737, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 11000, 
+   "name": "Transportation", 
+   "invoice": 302
+  }
+ }, 
+ {
+  "pk": 738, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 302
+  }
+ }, 
+ {
+  "pk": 739, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 304
+  }
+ }, 
+ {
+  "pk": 740, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 304
+  }
+ }, 
+ {
+  "pk": 741, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 304
+  }
+ }, 
+ {
+  "pk": 742, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Swimming Lesson", 
+   "invoice": 304
+  }
+ }, 
+ {
+  "pk": 743, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 304
+  }
+ }, 
+ {
+  "pk": 744, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 306
+  }
+ }, 
+ {
+  "pk": 745, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 306
+  }
+ }, 
+ {
+  "pk": 746, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4000, 
+   "name": "Piano Class", 
+   "invoice": 306
+  }
+ }, 
+ {
+  "pk": 747, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4800, 
+   "name": "Ballet Lesson", 
+   "invoice": 306
+  }
+ }, 
+ {
+  "pk": 748, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 306
+  }
+ }, 
+ {
+  "pk": 749, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 308
+  }
+ }, 
+ {
+  "pk": 750, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 308
+  }
+ }, 
+ {
+  "pk": 751, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 310
+  }
+ }, 
+ {
+  "pk": 752, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 310
+  }
+ }, 
+ {
+  "pk": 753, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 316
+  }
+ }, 
+ {
+  "pk": 754, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 316
+  }
+ }, 
+ {
+  "pk": 755, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 312
+  }
+ }, 
+ {
+  "pk": 756, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 312
+  }
+ }, 
+ {
+  "pk": 757, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 318
+  }
+ }, 
+ {
+  "pk": 758, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 318
+  }
+ }, 
+ {
+  "pk": 759, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 318
+  }
+ }, 
+ {
+  "pk": 760, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 320
+  }
+ }, 
+ {
+  "pk": 761, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 8250, 
+   "name": "Transportation", 
+   "invoice": 320
+  }
+ }, 
+ {
+  "pk": 762, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 320
+  }
+ }, 
+ {
+  "pk": 763, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 322
+  }
+ }, 
+ {
+  "pk": 764, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 322
+  }
+ }, 
+ {
+  "pk": 765, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 16500, 
+   "name": "Transportation", 
+   "invoice": 322
+  }
+ }, 
+ {
+  "pk": 766, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 58000, 
+   "name": "Fees", 
+   "invoice": 324
+  }
+ }, 
+ {
+  "pk": 767, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 324
+  }
+ }, 
+ {
+  "pk": 768, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 60000, 
+   "name": "Fees", 
+   "invoice": 334
+  }
+ }, 
+ {
+  "pk": 769, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 334
+  }
+ }, 
+ {
+  "pk": 770, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 13200, 
+   "name": "Transportation", 
+   "invoice": 334
+  }
+ }, 
+ {
+  "pk": 771, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 60000, 
+   "name": "Fees", 
+   "invoice": 340
+  }
+ }, 
+ {
+  "pk": 772, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 340
+  }
+ }, 
+ {
+  "pk": 773, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 5600, 
+   "name": "Gymnastic Lesson", 
+   "invoice": 340
+  }
+ }, 
+ {
+  "pk": 774, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 60000, 
+   "name": "Fees", 
+   "invoice": 344
+  }
+ }, 
+ {
+  "pk": 775, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 344
+  }
+ }, 
+ {
+  "pk": 777, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 4200, 
+   "name": "Football Coaching Lesson", 
+   "invoice": 344
+  }
+ }, 
+ {
+  "pk": 778, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 60000, 
+   "name": "Fees", 
+   "invoice": 342
+  }
+ }, 
+ {
+  "pk": 779, 
+  "model": "finance.invoiceitem", 
+  "fields": {
+   "amount": 12000, 
+   "name": "Instructional Materials", 
+   "invoice": 342
+  }
+ }
+]

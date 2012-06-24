@@ -1,0 +1,82 @@
+[
+ {
+  "pk": 10, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "N"
+  }
+ }, 
+ {
+  "pk": 11, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "K1"
+  }
+ }, 
+ {
+  "pk": 12, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "K2"
+  }
+ }, 
+ {
+  "pk": 13, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y1"
+  }
+ }, 
+ {
+  "pk": 14, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y2"
+  }
+ }, 
+ {
+  "pk": 15, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y3"
+  }
+ }, 
+ {
+  "pk": 16, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y4"
+  }
+ }, 
+ {
+  "pk": 17, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y5"
+  }
+ }, 
+ {
+  "pk": 18, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y6"
+  }
+ }, 
+ {
+  "pk": 19, 
+  "model": "school.classroom", 
+  "fields": {
+   "date_opened": "2010-03-22", 
+   "year": "Y7"
+  }
+ }
+]
