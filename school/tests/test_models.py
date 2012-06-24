@@ -1,8 +1,9 @@
-import unittest
+from django.test import TestCase
 from django.db import IntegrityError
 from school.models import Student, ClassRoom
 from datetime import datetime
-class TestStudent(unittest.TestCase):
+
+class TestStudent(TestCase):
     def setUp(self):
         self.classroom = ClassRoom.objects.create(year='N')
 

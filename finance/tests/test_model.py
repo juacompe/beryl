@@ -1,10 +1,9 @@
-import unittest
-
+from django.test import TestCase
 from finance.models import *
 from school.models import *
 from datetime import datetime, timedelta
 
-class TestReceipt(unittest.TestCase):
+class TestReceipt(TestCase):
     def setUp(self):
         self.class_room = ClassRoom.objects.create(year='N')
         self.student = Student.objects.create(first_name='Myfirstname',

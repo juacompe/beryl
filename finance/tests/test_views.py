@@ -10,8 +10,7 @@
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
-import unittest
-
+from django.test import TestCase 
 from django.test.client import Client
 from django.contrib.auth.models import User
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
@@ -19,7 +18,7 @@ from school.models import Student, ClassRoom
 from finance.views import number_to_currency, excel_style
 from datetime import datetime
 
-class TestInvoiceReceipt(unittest.TestCase):
+class TestInvoiceReceipt(TestCase):
     def setUp(self):
         # create superuser
         User.objects.create_superuser(username='admin',

@@ -1,11 +1,10 @@
-import unittest
-
+from django.test import TestCase 
 from django.test.client import Client
 from django.contrib.auth.models import User
 from django.core.management import call_command
 from school.models import Student, ClassRoom
 
-class TestAdmin(unittest.TestCase):
+class TestAdmin(TestCase):
     def setUp(self):
         # create superuser
         User.objects.create_superuser(username='admin',

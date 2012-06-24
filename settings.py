@@ -17,7 +17,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'
+DATABASE_ENGINE = 'django.db.backends.sqlite3'
 DATABASE_NAME = join_with_project_path('db','beryl.db')
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
@@ -122,6 +122,9 @@ try:
 except ImportError, e:
     if str(e) != 'No module named settings_local':
         raise e
+
+# DJANGO-NOSE
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 ## RCIS SETTINGS ##
 TERM = 'Second Term   (Jan 06, 2011 to Apr 1, 2011)'

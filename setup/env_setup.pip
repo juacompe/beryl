@@ -1,4 +1,4 @@
-django
-psycopg2
-xlwt
-xlutils
+django==1.2.3
+psycopg2==2.2.2
+xlwt==0.7.2
+xlutils==1.4.1
