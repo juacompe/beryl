@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+BACKUP_PATH="/backup"
+DBNAME="beryl"
+
+NOW=`date '+%Y%m%d_%T'`
+vacuumdb -w -z -U postgres $DBNAME
+pg_dump $DBNAME -w -U postgres | gzip > $BACKUP_PATH/"postgresql-$DBNAME-$NOW.gz"
+
