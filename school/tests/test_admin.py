@@ -3,24 +3,18 @@ from django.test.client import Client
 from django.contrib.auth.models import User
 from django.core.management import call_command
 from school.models import Student, ClassRoom
+from testutils import factory
+from testutils.basetest import AdminTestCase
 
-class TestAdmin(TestCase):
+class TestAdmin(AdminTestCase):
     def setUp(self):
-        # create superuser
-        User.objects.create_superuser(username='admin',
-                                       email='admin@somewhere.com',
-                                       password='1234')
-        self.client = Client()
-        self.client.login(username='admin', password='1234')
-        
-        self.class_room = ClassRoom.objects.create(year='N')
-        self.student = Student.objects.create(first_name='Myfirstname',
-                               middle_name='Mymiddlename',
-                               last_name='Mylastname',
-                               gender ='N',
-                               birth_date = '2008-01-01',
-                               class_room = self.class_room)
+        self.login_as_admin()
+        self.prepare_test_data()
 
+    def prepare_test_data(self):
+        self.class_room = class_room = factory.create_class_room()
+        self.student = factory.create_student(class_room)
+        
     def tearDown(self):
         del self.client
 

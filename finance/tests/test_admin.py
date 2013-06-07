@@ -1,17 +1,14 @@
 from django.test import TestCase 
 from django.test.client import Client
-from testutils import factory
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
+from testutils import factory
+from testutils.basetest import AdminTestCase
 
-class TestAdmin(TestCase):
+class TestAdmin(AdminTestCase):
     def setUp(self):
         self.login_as_admin()
         self.prepare_test_data()
 
-    def login_as_admin(self):
-        factory.create_superuser('admin', '1234')
-        self.client.login(username='admin', password='1234')
-        
     def prepare_test_data(self):
         invoice = self.invoice = factory.create_invoice()
         invoice_item = factory.create_invoice_item('Pay for fee', 100, invoice) 
