@@ -1,84 +1,91 @@
 from django.test import TestCase 
-
 from django.test.client import Client
-from django.contrib.auth.models import User
+from testutils import factory
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
-from school.models import Student, ClassRoom
-from datetime import datetime
 
 class TestAdmin(TestCase):
     def setUp(self):
-        # create superuser
-        User.objects.create_superuser(username='admin',
-                                       email='admin@somewhere.com',
-                                       password='1234')
-        self.client = Client()
+        self.login_as_admin()
+        self.prepare_test_data()
+
+    def login_as_admin(self):
+        factory.create_superuser('admin', '1234')
         self.client.login(username='admin', password='1234')
-
-        self.class_room = ClassRoom.objects.create(year='N')
-        self.student = Student.objects.create(first_name='Myfirstname',
-                               middle_name='Mymiddlename',
-                               last_name='Mylastname',
-                               gender ='N',
-                               birth_date = '2008-01-01',
-                               class_room = self.class_room)
-        self.invoice = Invoice.objects.create(student=self.student,deadline=datetime.now())
-        self.invoice_item = InvoiceItem.objects.create(invoice=self.invoice,amount=100,name='Pay for fee' )
-        self.receipt = Receipt.objects.create(invoice=self.invoice)
-        self.receipt_item = ReceiptItem.objects.create(receipt=self.receipt,amount=100,name='Pay for fee' )
-
+        
+    def prepare_test_data(self):
+        invoice = self.invoice = factory.create_invoice()
+        invoice_item = factory.create_invoice_item('Pay for fee', 100, invoice) 
+        receipt = factory.create_receipt(invoice) 
+        receipt_item = factory.create_receipt_item('Pay for fee', 100, receipt)
 
     def tearDown(self):
         del self.client
 
     def test_list_invoices(self):
         response = self.client.get('/admin/finance/invoice/')
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_search_invoices(self):
         response = self.client.get('/admin/finance/invoice/?q=test')
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_select_invoice(self):
         response = self.client.get('/admin/finance/invoice/%s/' % self.invoice.id)
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_view_invoice_for_printing(self):
         response = self.client.get('/finance/invoice/1/')
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_list_receipts(self):
         response = self.client.get('/admin/finance/receipt/')
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_search_receipt(self):
         response = self.client.get('/admin/finance/receipt/?q=test')
-        print 'status code = ', response.status_code
-        self.failUnless(200 == response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def test_export_invoice_as_excel_link(self):
+        export_link = '<a href="/finance/invoice/xls/1/">export as excel</a>'
+        printed_link = '<a href="/finance/invoice/xls/1/">printed</a>'
+        self.assert_invoice_list_contains_export_link(export_link)
+        self.print_invoice()
+        self.assert_invoice_list_contains_printed_link(export_link, printed_link)
+
+    def assert_invoice_list_contains_export_link(self, export_link):
         response = self.client.get('/admin/finance/invoice/')
-        self.failUnless(200 == response.status_code)
-        assert '<a href="/finance/invoice/xls/1/">export as excel</a>' in response.content
+        self.assertContains(response, export_link)
+
+    def print_invoice(self):
         response = self.client.get('/finance/invoice/xls/1/')
-        self.failUnless(200 == response.status_code)
-        #could be printed after the first print
+
+    def assert_invoice_list_contains_printed_link(self, export_link, printed_link):
+        """
+        Invoices are not encouraged to be printed twice.
+
+        So after printed once, the export link is changed to printed link.
+        """
         response = self.client.get('/admin/finance/invoice/')
-        self.failUnless(200 == response.status_code)
-        assert '<a href="/finance/invoice/xls/1/">printed</a>' in response.content
+        self.assertNotContains(response, export_link)
+        self.assertContains(response, printed_link)
 
     def test_export_receipt_as_excel_link(self):
+        export_link = '<a href="/finance/receipt/xls/1/">export as excel</a>'
+        self.assert_receipt_list_contains_export_link(export_link)
+        self.print_receipt()
+        self.assert_receipt_list_still_contains_export_link(export_link)
+
+    def assert_receipt_list_contains_export_link(self, export_link):
         response = self.client.get('/admin/finance/receipt/')
-        self.failUnless(200 == response.status_code)
-        assert '<a href="/finance/receipt/xls/1/">export as excel</a>' in response.content
+        self.assertContains(response, export_link)
+
+    def print_receipt(self):
         response = self.client.get('/finance/receipt/xls/1/')
-        self.failUnless(200 == response.status_code)
-        #could be printed after the first print
-##        response = self.client.get('/admin/finance/receipt/')
-##        self.failUnless(200 == response.status_code)
-##        assert '<a href="/finance/receipt/xls/1/">printed</a>' in response.content
+        self.assertEqual(200, response.status_code)
+
+    def assert_receipt_list_still_contains_export_link(self, export_link):
+        """
+        Receipts, unlike invoices, can be printed twice.
+        """
+        self.assert_receipt_list_contains_export_link(export_link)
+

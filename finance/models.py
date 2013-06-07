@@ -29,7 +29,6 @@ class Invoice(models.Model):
             return '<a href="/finance/invoice/%s/">view invoice detail</a>' % (self.id)
         else:
             return '<a href="/finance/invoice/%s/">printed</a>' % (self.id)
-        #return '<a href="{%url school.views.invoice_detail self.id %}">view invoice detail</a>'
     invoice_link.allow_tags = True
 
     def invoice_xls(self):
@@ -37,7 +36,6 @@ class Invoice(models.Model):
             return '<a href="/finance/invoice/xls/%s/">export as excel</a>' % (self.id)
         else:
             return '<a href="/finance/invoice/xls/%s/">printed</a>' % (self.id)
-        #return '<a href="{%url school.views.invoice_detail self.id %}">view invoice detail</a>'
     invoice_xls.allow_tags = True
 
 class Item(models.Model):
@@ -74,10 +72,6 @@ class Receipt(models.Model):
         return self.items.all().aggregate(models.Sum('amount')).get('amount__sum') or 0
 
     def receipt_xls(self):
-##        if not self.date_paid:
-##            return '<a href="/finance/receipt/xls/%s/">export as excel</a>' % (self.id)
-##        else:
-##            return '<a href="/finance/receipt/xls/%s/">printed</a>' % (self.id)
         return '<a href="/finance/receipt/xls/%s/">export as excel</a>' % (self.id)
     receipt_xls.allow_tags = True
 
