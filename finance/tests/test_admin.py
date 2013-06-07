@@ -1,6 +1,6 @@
 from django.test import TestCase 
 from django.test.client import Client
-from finance.tests import factory
+from testutils import factory
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
 
 class TestAdmin(TestCase):
