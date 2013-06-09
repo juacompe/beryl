@@ -17,8 +17,9 @@ class Invoice(models.Model):
     def is_due(self):
         paying_date = datetime.now()
         try:
-            paying_date = self.receipt.date_paid
-        except Receipt.DoesNotExist:
+            last_paid_receipt = self.receipts.order_by('-date_paid')[0]
+            paying_date = last_paid_receipt.date_paid
+        except IndexError:
             pass
         return paying_date > self.deadline
 
@@ -47,6 +48,8 @@ class Item(models.Model):
 
     def __unicode__(self):
         return 'Item %s (%s baht)' % (self.name,self.amount)
+
+
 class InvoiceItem(Item):
     invoice = models.ForeignKey('Invoice', related_name='items')
 
@@ -63,7 +66,7 @@ def invoice_to_receipt(invoice):
 
 class Receipt(models.Model):
     date_paid = models.DateTimeField(auto_now_add=True)
-    invoice = models.OneToOneField('Invoice', related_name='receipt', null=True, blank=True)
+    invoice = models.ForeignKey('Invoice', related_name='receipts', null=True, blank=True)
 
     def __unicode__(self):
         return 'Receipt no. %s = %s' % (self.id,self.total())
