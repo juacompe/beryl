@@ -1,3 +1,4 @@
+/settings_local.py
 /db/beryl.db
 *.pyc
 *.swp
