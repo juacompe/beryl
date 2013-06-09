@@ -1,6 +1,9 @@
 # Create your views here.
 
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import render_to_response 
+from django.template import RequestContext
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
 from datetime import datetime
 from finance.models import Invoice
@@ -194,3 +197,9 @@ def item_in_excel(ws,items,template):
         #item.amount
         ws.write(row,5,number_to_currency(item.amount),style_amount)
         row = row + 1
+
+@login_required
+def new_receipt(request):
+    context = RequestContext(request)
+    return render_to_response('new_receipt.html', context)
+

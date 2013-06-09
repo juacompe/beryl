@@ -151,6 +151,7 @@ except ImportError, e:
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 ## RCIS SETTINGS ##
+LOGIN_URL = '/'
 TERM = 'Second Term   (Jan 06, 2011 to Apr 1, 2011)'
 INV_TEMPLATE = join_with_project_path('beryl', 'static','invoice_template.xls')
 REP_TEMPLATE = join_with_project_path('beryl', 'static','receipt_template.xls')

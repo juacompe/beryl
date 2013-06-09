@@ -4,9 +4,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('beryl.views',
     # Examples:
-    url(r'^$', 'beryl.views.home', name='home'),
+    url(r'^$', 'home', name='home'),
+    url(r'^accounts/login/', 'mylogin', name='login'),
+    url(r'^accounts/logout/', 'mylogout', name='logout'),
     # url(r'^beryl/', include('beryl.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

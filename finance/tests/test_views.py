@@ -18,6 +18,21 @@ from school.models import Student, ClassRoom
 from testutils import factory
 from testutils.basetest import AdminTestCase
 
+class TestAddNewReceipt(AdminTestCase):
+    def setUp(self):
+        self.login_as_admin()
+
+    def test_get_new_receipt(self):
+        response = self.client.get('/finance/receipt/new/')
+        self.assertEqual(200, response.status_code)
+
+    def test_get_new_receipt_without_login(self):
+        self.client.logout()
+        url = '/finance/receipt/new/'
+        response = self.client.get(url)
+        self.assertRedirects(response, '/?next=%s' % url)
+
+
 class TestInvoiceReceipt(AdminTestCase):
     def setUp(self):
         self.login_as_admin()
