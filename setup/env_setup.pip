@@ -1,4 +1,4 @@
-django==1.2.4
+Django==1.5.1
 psycopg2==2.2.2
 xlwt==0.7.2
 xlutils==1.4.1
