@@ -13,14 +13,14 @@ def create_class_room(year='N'):
     class_room, created = ClassRoom.objects.get_or_create(year='N')
     return class_room 
     
-def create_student(class_room=None):
+def create_student(class_room=None, first_name='Myfirstname', last_name='Mylastname'):
     class_room = class_room or create_class_room()
     kwargs = {
         'birth_date': '2008-01-01',
         'class_room': class_room,
-        'first_name': 'Myfirstname',
+        'first_name': first_name,
         'gender': 'N',
-        'last_name': 'Mylastname',
+        'last_name': last_name,
         'middle_name': 'Mymiddlename',
     }
     student, created = Student.objects.get_or_create(**kwargs)
