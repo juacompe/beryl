@@ -26,7 +26,7 @@ def create_student(class_room=None):
     student, created = Student.objects.get_or_create(**kwargs)
     return student
     
-def create_invoice(student=None):
+def create_invoice(student=None, date_viewed=None, date_paid=None):
     student = student or create_student()
     invoice, created = Invoice.objects.get_or_create(student=student, deadline=NOW)
     return invoice

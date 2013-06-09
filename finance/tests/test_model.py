@@ -1,27 +1,19 @@
+from datetime import datetime, timedelta
 from django.test import TestCase
 from finance.models import *
 from school.models import *
-from datetime import datetime, timedelta
+from testutils import factory
 
 class TestReceipt(TestCase):
     def setUp(self):
-        self.class_room = ClassRoom.objects.create(year='N')
-        self.student = Student.objects.create(first_name='Myfirstname',
-                               middle_name='Mymiddlename',
-                               last_name='Mylastname',
-                               gender ='N',
-                               birth_date = '2008-01-01',
-                               class_room = self.class_room)
-        self.invoice = Invoice.objects.create(student=self.student,
-                                              date_viewed=datetime(2010,5,13,8,27),
-                                              date_paid=datetime(2010,11,22,16,27),
-                                              deadline=datetime.now())
-        self.invoice_item = InvoiceItem.objects.create(invoice=self.invoice,
-                                                       amount=100,
-                                                       name='Pay for fee' )
-        self.invoice_item2 = InvoiceItem.objects.create(invoice=self.invoice,
-                                                       amount=50000,
-                                                       name='Pay for fun' )
+        kwargs = {
+            'date_viewed': datetime(2010,5,13,8,27), 
+            'date_paid': datetime(2010,11,22,16,27),
+        }
+        invoice = self.invoice = factory.create_invoice(**kwargs)
+        invoice_item = factory.create_invoice_item('Pay for fee', 100, invoice) 
+        invoice_item = factory.create_invoice_item('Pay for fun', 50000, invoice) 
+
     def test_is_not_due(self):
         # dues tomorrow and not yet paid
         self.invoice.deadline = datetime.now() + timedelta(1)
@@ -50,3 +42,4 @@ class TestReceipt(TestCase):
         receipt_item = receipt.items.all()[0]
         self.failUnless('Pay for' in receipt_item.name)
         self.failUnless(receipt_item.amount == 50000 or 100)
+

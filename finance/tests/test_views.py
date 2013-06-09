@@ -10,35 +10,24 @@
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
-from django.test import TestCase 
-from django.test.client import Client
-from django.contrib.auth.models import User
-from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
-from school.models import Student, ClassRoom
-from finance.views import number_to_currency, excel_style
 from datetime import datetime
+from django.test import TestCase 
+from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
+from finance.views import number_to_currency, excel_style
+from school.models import Student, ClassRoom
+from testutils import factory
+from testutils.basetest import AdminTestCase
 
-class TestInvoiceReceipt(TestCase):
+class TestInvoiceReceipt(AdminTestCase):
     def setUp(self):
-        # create superuser
-        User.objects.create_superuser(username='admin',
-                                       email='admin@somewhere.com',
-                                       password='1234')
-        self.client = Client()
-        self.client.login(username='admin', password='1234')
+        self.login_as_admin()
+        self.prepare_test_data()
 
-        self.class_room = ClassRoom.objects.create(year='N')
-        self.student = Student.objects.create(first_name='Myfirstname',
-                               middle_name='Mymiddlename',
-                               last_name='Mylastname',
-                               gender ='N',
-                               birth_date = '2008-01-01',
-                               class_room = self.class_room)
-        self.invoice = Invoice.objects.create(student=self.student,deadline=datetime.now())
-        self.invoice_item = InvoiceItem.objects.create(invoice=self.invoice,amount=100,name='Pay for fee' )
-        self.receipt = Receipt.objects.create(invoice=self.invoice)
-        self.receipt_item = ReceiptItem.objects.create(receipt=self.receipt,amount=100,name='Pay for fee' )
-
+    def prepare_test_data(self):
+        invoice = self.invoice = factory.create_invoice()
+        invoice_item = factory.create_invoice_item('Pay for fee', 100, invoice) 
+        receipt = factory.create_receipt(invoice) 
+        receipt_item = factory.create_receipt_item('Pay for fee', 100, receipt)
 
     def tearDown(self):
         del self.client
