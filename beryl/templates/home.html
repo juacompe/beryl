@@ -1,2 +1,23 @@
 {% extends 'base.html' %}
 
+{% block body %}
+    <div class="hero-unit">
+        <h1>Welcome to Beryl!</h1>
+        <p>Beryl is a financial system of RC International School.</p>
+        <p>Press <span>Invoices<span> button to go to invoice admin page.</p>
+        <p>Press <span>Receipts<span> button to create a receipt.</p>
+    </div>
+
+    <div class="row">
+        <div class="span3">
+            <a class="btn btn-large btn-primary" href="/admin/finance/invoice/">
+                <i class="icon-book icon-4x"></i> Invoices
+            </a>
+        </div>
+        <div class="span3">
+            <a class="btn btn-large btn-primary">
+                <i class="icon-money icon-4x"></i> Receipts
+            </a>
+        </div>
+    </div>
+{% endblock %}
