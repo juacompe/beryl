@@ -6,6 +6,7 @@ class TestHomePage(TestCase):
         response = self.client.get('/')
         self.assertEqual(200, response.status_code)
 
+class TestAuthentication(TestCase):
     def test_login(self):
         factory.create_superuser()
         post_data = {'username': 'admin', 'password': 'iamnottellingyou'}
