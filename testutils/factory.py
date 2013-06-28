@@ -31,9 +31,9 @@ def create_invoice(student=None, date_viewed=None, date_paid=None):
     invoice, created = Invoice.objects.get_or_create(student=student, deadline=NOW)
     return invoice
 
-def create_invoice_item(name, amount, invoice=None):
+def create_invoice_item(name='Pay for fee', amount=100, invoice=None):
     invoice = invoice or create_invoice()
-    kwargs = dict(invoice=invoice, amount=100, name='Pay for fee')
+    kwargs = dict(invoice=invoice, amount=amount, name=name)
     invoice_item, created = InvoiceItem.objects.get_or_create(**kwargs)
     return invoice_item
     
@@ -42,9 +42,9 @@ def create_receipt(invoice=None):
     receipt, created = Receipt.objects.get_or_create(invoice=invoice)
     return receipt
     
-def create_receipt_item(name, amount, receipt=None):
+def create_receipt_item(name='Pay for fee', amount=100, receipt=None):
     receipt = receipt or create_receipt()
-    kwargs = dict(receipt=receipt, amount=100, name='Pay for fee')
+    kwargs = dict(receipt=receipt, amount=amount, name=name)
     receipt_item, created = ReceiptItem.objects.get_or_create(**kwargs)
     return receipt_item
 
