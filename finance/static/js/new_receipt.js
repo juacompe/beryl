@@ -5,11 +5,27 @@ myModule.config(function($interpolateProvider) {
     $interpolateProvider.endSymbol('}]}');
 });
 
-function ReceiptItemCtrl($scope) {
-    $scope.receiptItems = [
-        {name:"pay for fees", amount:10000},
-        {name:"pay for fun", amount:1000},
+myModule.factory('receiptItemsService', function() {
+    var service = {};
+
+    service.receiptItems = [
+        {name:"ballet class", amount:3000},
+        {name:"piano class", amount:1000},
     ];
+
+    service.addItem = function(name, amount) {
+        var newItem = {
+            name: name, 
+            amount: amount 
+        };
+        service.receiptItems.push(newItem);
+    };
+
+    return service;
+});
+
+function ReceiptItemCtrl($scope, receiptItemsService) {
+    $scope.receiptItems = receiptItemsService.receiptItems
 
     $scope.getSummary = function() {
         var summary = 0;
@@ -20,11 +36,9 @@ function ReceiptItemCtrl($scope) {
     };
 
     $scope.addItem = function() {
-        var newItem = {
-            name: $scope.formReceiptItemName, 
-            amount: parseInt($scope.formReceiptItemAmount)
-        };
-        $scope.receiptItems.push(newItem);
+        var name = $scope.formReceiptItemName;
+        var amount = parseInt($scope.formReceiptItemAmount);
+        receiptItemsService.addItem(name, amount);
         $scope.formReceiptItemName = '';
         $scope.formReceiptItemAmount = '';
         $("#formReceiptItemName").focus();
@@ -33,8 +47,21 @@ function ReceiptItemCtrl($scope) {
     $scope.removeItem = function() {
         if(confirm('Are you sure you want to delete this item?')) {
             var index = $scope.receiptItems.indexOf(this.item);
-            $scope.receiptItems.splice(index);
+            $scope.receiptItems.splice(index, 1);
         }
     };
 };
 
+
+function InvoiceItemCtrl($scope, receiptItemsService) {
+    $scope.invoiceItems = [
+        {name:"pay for fees", amount:30000},
+        {name:"pay for fun", amount:1000},
+    ];
+
+    $scope.handleShareClick = function() {
+        var name = this.item.name;
+        var amount = this.item.amount;
+        receiptItemsService.addItem(name, amount);
+    };
+};

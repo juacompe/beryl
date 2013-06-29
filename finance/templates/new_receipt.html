@@ -56,13 +56,17 @@
                     <div class="span6"><span class="badge">Deadline</span></div>
                     <div class="span6">{{ invoice.deadline }}</div>
                 </div>
-                <div>
+                <div ng-controller="InvoiceItemCtrl">
                     <span class="badge">Items</span>
-                    <ul>
-                        {% for item in invoice.items.all %}
-                        <li>{{ item.name }} {{ item.amount }}</li>
-                        {% endfor %}
-                    </ul>
+                    <div class="form-horizontal" ng-repeat="item in invoiceItems">
+                        <div class="span2">
+                            <a class="btn" ng-click="handleShareClick()">
+                                <i class="icon-share"></i>
+                            </a>
+                        </div>
+                        <div class="span6">{[{ item.name }]}</div>
+                        <div class="span4">{[{ item.amount }]}</div>
+                    </div>
                 </div><!-- div.invoice -->
             </div>
         </div>
