@@ -201,5 +201,8 @@ def item_in_excel(ws,items,template):
 @login_required
 def new_receipt(request):
     context = RequestContext(request)
+    invoice= Invoice.objects.all()[0]
+    context['invoice'] = invoice
+    context['student'] = invoice.student
     return render_to_response('new_receipt.html', context)
 

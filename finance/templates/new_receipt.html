@@ -1,10 +1,76 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+{{ block.super }}
+<link href="{% static "css/new_receipt.css" %}" rel="stylesheet" media="screen">
+{% endblock %}
 
 {% block body %}
-<div class="row">
-    <div>
-    <input class="span3" type="text" placeholder="Search with invoice id or student name"></input>
+<div class="row-fluid" ng-app="createReceiptApp">
+    <div class="span4 input-prepend">
+        <span class="icon-search add-on"></span>
+        <input class="input-xlarge" type="text" placeholder="Search with invoice id or student name"></input>
+    </div>
+    <div class="span8">
+        <div class="student row well">
+            <h3><i class="icon-user"></i> Student</h3>
+            <div>{{ student.full_name }}</div>
+        </div><!-- div.student -->
+        <div class="row">
+            <div class="receipt span6" ng-controller="ReceiptItemCtrl">
+                <h3><i class="icon-money"></i> Receipt</h3>
+                <div>
+                    <form id="new-receipt-item-form" ng-submit="addItem()" class="form-horizontal">
+                        <input id="formReceiptItemName" class="span6" type="text"
+                               ng-model="formReceiptItemName" placeholder="name"></input>
+                        <input id="formReceiptItemAmount" class="span5" type="text"
+                               ng-model="formReceiptItemAmount" placeholder="amount"></input>
+                        </input>
+                        <input class="icon-plus add-on" type="submit" value="+">
+                    </form>
+                    <div ng-repeat="item in receiptItems" class="form-horizontal">
+                        <div class="span6">{[{ item.name }]}</div>
+                        <div class="span5">{[{ item.amount }]}</div>
+                        <div class="span1">
+                            <a class="btn" ng-click="removeItem()"><i class="icon-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="receipt-summary">
+                        <div class="span6"><strong>Summary</strong></div>
+                        <div class="span6">{[{ getSummary() }]}</div>
+                    </div>
+                </div>
+            </div><!-- div.receipt -->
+            <div class="invoice span6 well">
+                <h3><i class="icon-book"></i> Invoice</h3>
+                <div>
+                    <div class="span6"><span class="badge">Invoice id</span></div>
+                    <div class="span6">{{ invoice.id }}</div>
+                </div>
+                <div>
+                    <div class="span6"><span class="badge">Created</span></div>
+                    <div class="span6">{{ invoice.date_created }}</div>
+                </div>
+                <div>
+                    <div class="span6"><span class="badge">Deadline</span></div>
+                    <div class="span6">{{ invoice.deadline }}</div>
+                </div>
+                <div>
+                    <span class="badge">Items</span>
+                    <ul>
+                        {% for item in invoice.items.all %}
+                        <li>{{ item.name }} {{ item.amount }}</li>
+                        {% endfor %}
+                    </ul>
+                </div><!-- div.invoice -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
 
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% static "js/new_receipt.js" %}"></script>
+{% endblock %}
