@@ -8,10 +8,7 @@ myModule.config(function($interpolateProvider) {
 myModule.factory('receiptItemsService', function() {
     var service = {};
 
-    service.receiptItems = [
-        {name:"ballet class", amount:3000},
-        {name:"piano class", amount:1000},
-    ];
+    service.receiptItems = [];
 
     service.addItem = function(name, amount) {
         var newItem = {
@@ -57,9 +54,11 @@ function InvoiceItemCtrl($scope, receiptItemsService) {
     $scope.invoiceItems = [
         {name:"pay for fees", amount:30000},
         {name:"pay for fun", amount:1000},
+        {name:"ballet class", amount:3000},
+        {name:"piano class", amount:1000},
     ];
 
-    $scope.handleShareClick = function() {
+    $scope.copyToReceipt = function() {
         var name = this.item.name;
         var amount = this.item.amount;
         receiptItemsService.addItem(name, amount);
