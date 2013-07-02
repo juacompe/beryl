@@ -14,12 +14,12 @@
     </div>
     <div class="span8">
         <div class="student row well">
-            <h3><i class="icon-user"></i> Student</h3>
+            <h4><i class="icon-user"></i> Student</h4>
             <div>{{ student.full_name }}</div>
         </div><!-- div.student -->
         <div class="row">
             <div class="receipt span6" ng-controller="ReceiptItemCtrl">
-                <h3><i class="icon-money"></i> Receipt</h3>
+                <h4><i class="icon-money"></i> Receipt</h4>
                 <div>
                     <form id="new-receipt-item-form" ng-submit="addItem()" class="form-horizontal">
                         <input id="formReceiptItemName" class="span6" type="text"
@@ -43,7 +43,7 @@
                 </div>
             </div><!-- div.receipt -->
             <div class="invoice span6 well">
-                <h3><i class="icon-book"></i> Invoice</h3>
+                <h4><i class="icon-book"></i> Invoice</h4>
                 <div>
                     <div class="span6"><span class="badge">Invoice id</span></div>
                     <div class="span6">{{ invoice.id }}</div>
