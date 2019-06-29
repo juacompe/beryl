@@ -67,12 +67,8 @@ def export_invoice_as_excel(request,inv_id):
     style_amount, style_name = excel_style()
     invoice = Invoice.objects.filter(id = inv_id)
     if invoice:
-        #you need to have text_export.xls in your current path. It's a dummy file for invoice template
-        print '#################'
-        print settings.INV_TEMPLATE
-
         timestamp = datetime.now()
-        filename_save, resp = create_excel_with2(settings.INV_TEMPLATE, invoice, timestamp)
+        filename_save, resp = create_excel_with(settings.INV_TEMPLATE, invoice, timestamp, write_invoice)
         response = HttpResponse(resp, mimetype='application/ms-excel')
         response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
         invobj = Invoice.objects.get(id=inv_id)
@@ -89,7 +85,7 @@ def export_receipt_as_excel(request,rep_id):
     timestamp = datetime.now()
     receipt = Receipt.objects.filter(id = rep_id)
     if receipt:
-        filename_save, resp = create_excel_with(settings.REP_TEMPLATE, receipt, timestamp)
+        filename_save, resp = create_excel_with(settings.REP_TEMPLATE, receipt, timestamp, write_receipt)
         response = HttpResponse(resp, mimetype='application/ms-excel')
         response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
 
@@ -102,29 +98,15 @@ def export_receipt_as_excel(request,rep_id):
         print 'no receipt to export'
         return HttpResponse('This receipt could not be found')
 
-def create_excel_with(template, receipt, timestamp):
+def create_excel_with(template, receipt, timestamp, write_fn):
+    #you need to have text_export.xls in your current path. It's a dummy file for invoice template
     print '#################'
     print template
     rb = open_workbook(template,formatting_info=True)
     rs = rb.sheet_by_index(0)
     wb = copy(rb)
     ws = wb.get_sheet(0)
-    filename_save = write_receipt(template, receipt, timestamp, ws)
-    #wb.save(filename_save)
-    fd, fn = tempfile.mkstemp()
-    os.close(fd)
-    wb.save(fn)
-    fh = open(fn, 'rb')
-    resp = fh.read()
-    fh.close()
-    return filename_save, resp
-
-def create_excel_with2(template, invoice, timestamp):
-    rb = open_workbook(template,formatting_info=True)
-    rs = rb.sheet_by_index(0)
-    wb = copy(rb)
-    ws = wb.get_sheet(0)
-    filename_save = write_invoice(template, invoice, timestamp, ws)
+    filename_save = write_fn(template, receipt, timestamp, ws)
     #wb.save(filename_save)
     fd, fn = tempfile.mkstemp()
     os.close(fd)
