@@ -70,39 +70,9 @@ def export_invoice_as_excel(request,inv_id):
         #you need to have text_export.xls in your current path. It's a dummy file for invoice template
         print '#################'
         print settings.INV_TEMPLATE
-        rb = open_workbook(settings.INV_TEMPLATE,formatting_info=True)
-        rs = rb.sheet_by_index(0)
-        wb = copy(rb)
-        ws = wb.get_sheet(0)
-        #student_name
-        ws.write(12,2,invoice.get().student.full_name)
-        #classroom
-        ws.write(12,5,invoice.get().student.class_room.year)
-        #duedate
-        ws.write(11,2,str(invoice.get().deadline))
-        #term (from settings.py)
-        ws.write(10,2,settings.TERM)
-        #invoice_item
-        items = InvoiceItem.objects.filter(invoice=invoice)
-        #write item in excel
-        item_in_excel(ws,items,settings.INV_TEMPLATE)
-##        row = 14
-##        for item in items:
-##            #item.name
-##            ws.write(row,0,unicode(item.name),style_name)
-##            #item.amount
-##            ws.write(row,5,item.amount,style_amount)
-##            row = row + 1
-        #item.total
-        ws.write(35,5,number_to_currency(invoice.get().total()),style_amount)
-        filename_save = 'inv_'+ str(invoice.get().id) + '_'+ str(datetime.now()).replace('.','_')
-        #wb.save(filename_save)
-        fd, fn = tempfile.mkstemp()
-        os.close(fd)
-        wb.save(fn)
-        fh = open(fn, 'rb')
-        resp = fh.read()
-        fh.close()
+
+        timestamp = datetime.now()
+        filename_save, resp = create_excel_with2(settings.INV_TEMPLATE, invoice, timestamp)
         response = HttpResponse(resp, mimetype='application/ms-excel')
         response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
         invobj = Invoice.objects.get(id=inv_id)
@@ -131,6 +101,36 @@ def export_receipt_as_excel(request,rep_id):
     else:
         print 'no receipt to export'
         return HttpResponse('This receipt could not be found')
+
+def create_excel_with2(template, invoice, timestamp):
+    style_amount, style_name = excel_style()
+    rb = open_workbook(template,formatting_info=True)
+    rs = rb.sheet_by_index(0)
+    wb = copy(rb)
+    ws = wb.get_sheet(0)
+    #student_name
+    ws.write(12,2,invoice.get().student.full_name)
+    #classroom
+    ws.write(12,5,invoice.get().student.class_room.year)
+    #duedate
+    ws.write(11,2,str(invoice.get().deadline))
+    #term (from settings.py)
+    ws.write(10,2,settings.TERM)
+    #invoice_item
+    items = InvoiceItem.objects.filter(invoice=invoice)
+    #write item in excel
+    item_in_excel(ws,items,settings.INV_TEMPLATE)
+    #item.total
+    ws.write(35,5,number_to_currency(invoice.get().total()),style_amount)
+    filename_save = 'inv_'+ str(invoice.get().id) + '_'+ str(datetime.now()).replace('.','_')
+    #wb.save(filename_save)
+    fd, fn = tempfile.mkstemp()
+    os.close(fd)
+    wb.save(fn)
+    fh = open(fn, 'rb')
+    resp = fh.read()
+    fh.close()
+    return filename_save, resp
 
 def create_excel_with(template, receipt, timestamp):
     style_amount, style_name = excel_style()
