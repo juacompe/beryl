@@ -102,6 +102,23 @@ def export_receipt_as_excel(request,rep_id):
         print 'no receipt to export'
         return HttpResponse('This receipt could not be found')
 
+def create_excel_with(template, receipt, timestamp):
+    print '#################'
+    print template
+    rb = open_workbook(template,formatting_info=True)
+    rs = rb.sheet_by_index(0)
+    wb = copy(rb)
+    ws = wb.get_sheet(0)
+    filename_save = write_receipt(template, receipt, timestamp, ws)
+    #wb.save(filename_save)
+    fd, fn = tempfile.mkstemp()
+    os.close(fd)
+    wb.save(fn)
+    fh = open(fn, 'rb')
+    resp = fh.read()
+    fh.close()
+    return filename_save, resp
+
 def create_excel_with2(template, invoice, timestamp):
     rb = open_workbook(template,formatting_info=True)
     rs = rb.sheet_by_index(0)
@@ -135,23 +152,6 @@ def write_invoice(template, invoice, ws):
     ws.write(35,5,number_to_currency(invoice.get().total()),style_amount)
     filename_save = 'inv_'+ str(invoice.get().id) + '_'+ str(datetime.now()).replace('.','_')
     return filename_save
-
-def create_excel_with(template, receipt, timestamp):
-    print '#################'
-    print template
-    rb = open_workbook(template,formatting_info=True)
-    rs = rb.sheet_by_index(0)
-    wb = copy(rb)
-    ws = wb.get_sheet(0)
-    filename_save = write_receipt(template, receipt, timestamp, ws)
-    #wb.save(filename_save)
-    fd, fn = tempfile.mkstemp()
-    os.close(fd)
-    wb.save(fn)
-    fh = open(fn, 'rb')
-    resp = fh.read()
-    fh.close()
-    return filename_save, resp
 
 def write_receipt(template, receipt, timestamp, ws):
     style_amount, style_name = excel_style()
