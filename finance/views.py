@@ -124,7 +124,7 @@ def create_excel_with2(template, invoice, timestamp):
     rs = rb.sheet_by_index(0)
     wb = copy(rb)
     ws = wb.get_sheet(0)
-    filename_save = write_invoice(template, invoice, ws)
+    filename_save = write_invoice(template, invoice, timestamp, ws)
     #wb.save(filename_save)
     fd, fn = tempfile.mkstemp()
     os.close(fd)
@@ -134,7 +134,7 @@ def create_excel_with2(template, invoice, timestamp):
     fh.close()
     return filename_save, resp
 
-def write_invoice(template, invoice, ws):
+def write_invoice(template, invoice, timestamp, ws):
     style_amount, style_name = excel_style()
     #student_name
     ws.write(12,2,invoice.get().student.full_name)
