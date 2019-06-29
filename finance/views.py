@@ -116,38 +116,10 @@ def export_invoice_as_excel(request,inv_id):
 
 #need to be refactored if you use school as a service
 def export_receipt_as_excel(request,rep_id):
-    style_amount, style_name = excel_style()
+    timestamp = datetime.now()
     receipt = Receipt.objects.filter(id = rep_id)
     if receipt:
-        rb = open_workbook(settings.REP_TEMPLATE,formatting_info=True)
-        rs = rb.sheet_by_index(0)
-        wb = copy(rb)
-        ws = wb.get_sheet(0)
-        timestamp = datetime.now()
-        #student_name
-        #ws.write(8,2,receipt.get().student.full_name)
-        #you need to have text_export.xls in your current path. It's a dummy file for invoice template
-        print '#################'
-        print settings.REP_TEMPLATE
-        #receipt.id
-        ws.write(4,1,str(receipt.get().id))
-        #refer to invoice
-        ws.write(4,3,str(receipt.get().invoice.id))
-        #date paid
-        ws.write(5,1,str(timestamp))
-        #item.total
-        ws.write(35,5,number_to_currency(receipt.get().total()),style_amount)
-        items = ReceiptItem.objects.filter(receipt=receipt)
-        #write item in excel
-        item_in_excel(ws,items,settings.REP_TEMPLATE)
-        filename_save = 'rep_' + str(receipt.get().id) + '_'+ str(datetime.now()).replace('.','_')
-        #wb.save(filename_save)
-        fd, fn = tempfile.mkstemp()
-        os.close(fd)
-        wb.save(fn)
-        fh = open(fn, 'rb')
-        resp = fh.read()
-        fh.close()
+        filename_save, resp = create_excel_with(settings.REP_TEMPLATE, receipt, timestamp)
         response = HttpResponse(resp, mimetype='application/ms-excel')
         response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
 
@@ -159,6 +131,38 @@ def export_receipt_as_excel(request,rep_id):
     else:
         print 'no receipt to export'
         return HttpResponse('This receipt could not be found')
+
+def create_excel_with(template, receipt, timestamp):
+    style_amount, style_name = excel_style()
+    rb = open_workbook(template,formatting_info=True)
+    rs = rb.sheet_by_index(0)
+    wb = copy(rb)
+    ws = wb.get_sheet(0)
+    #student_name
+    #ws.write(8,2,receipt.get().student.full_name)
+    #you need to have text_export.xls in your current path. It's a dummy file for invoice template
+    print '#################'
+    print settings.REP_TEMPLATE
+    #receipt.id
+    ws.write(4,1,str(receipt.get().id))
+    #refer to invoice
+    ws.write(4,3,str(receipt.get().invoice.id))
+    #date paid
+    ws.write(5,1,str(timestamp))
+    #item.total
+    ws.write(35,5,number_to_currency(receipt.get().total()),style_amount)
+    items = ReceiptItem.objects.filter(receipt=receipt)
+    #write item in excel
+    item_in_excel(ws,items,settings.REP_TEMPLATE)
+    filename_save = 'rep_' + str(receipt.get().id) + '_'+ str(datetime.now()).replace('.','_')
+    #wb.save(filename_save)
+    fd, fn = tempfile.mkstemp()
+    os.close(fd)
+    wb.save(fn)
+    fh = open(fn, 'rb')
+    resp = fh.read()
+    fh.close()
+    return filename_save, resp
 
 def excel_style():
     borders_amount = Borders()
