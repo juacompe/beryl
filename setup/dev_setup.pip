@@ -1,3 +1,3 @@
-nose
-django-nose
+nose==1.3.7
+django-nose==0.1.3
 ipython
