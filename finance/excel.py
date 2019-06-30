@@ -5,7 +5,7 @@ from xlutils.copy import copy
 import os, tempfile
 from django.conf import settings
 
-from finance.models import InvoiceItem, ReceiptItem
+from finance.models import InvoiceItem
 from finance.utils import number_to_currency
 
 def create_excel_with(template, receipt, timestamp, write_fn):
@@ -48,20 +48,20 @@ def write_invoice(template, invoice, timestamp, ws):
 def write_receipt(template, receipt, timestamp, ws):
     style_amount, style_name = excel_style()
     #student_name
-    #ws.write(8,2,receipt.get().student.full_name)
+    #ws.write(8,2,receipt.student.full_name)
     #you need to have text_export.xls in your current path. It's a dummy file for invoice template
     #receipt.id
-    ws.write(4,1,str(receipt.get().id))
+    ws.write(4,1,str(receipt.id))
     #refer to invoice
-    ws.write(4,3,str(receipt.get().invoice.id))
+    ws.write(4,3,str(receipt.invoice.id))
     #date paid
     ws.write(5,1,str(timestamp))
     #item.total
-    ws.write(35,5,number_to_currency(receipt.get().total()),style_amount)
-    items = ReceiptItem.objects.filter(receipt=receipt)
+    ws.write(35,5,number_to_currency(receipt.total()),style_amount)
+    items = receipt.items.all()
     #write item in excel
     item_in_excel(ws,items,template)
-    filename_save = 'rep_' + str(receipt.get().id) + '_'+ str(timestamp).replace('.','_')
+    filename_save = 'rep_' + str(receipt.id) + '_'+ str(timestamp).replace('.','_')
     return filename_save
 
 def insert_school_logo(ws):

@@ -70,8 +70,8 @@ def export_invoice_as_excel(request,inv_id):
 #need to be refactored if you use school as a service
 def export_receipt_as_excel(request,rep_id):
     timestamp = datetime.now()
-    receipt = Receipt.objects.filter(id = rep_id)
-    if receipt:
+    try:
+        receipt = Receipt.objects.get(id = rep_id)
         filename_save, resp = create_excel_with(settings.REP_TEMPLATE, receipt, timestamp, write_receipt)
         response = HttpResponse(resp, mimetype='application/ms-excel')
         response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
@@ -81,6 +81,6 @@ def export_receipt_as_excel(request,rep_id):
         repobj.save()
         print "status_code:" + str(response.status_code)
         return response
-    else:
+    except Receipt.DoesNotExist:
         print 'no receipt to export'
         return HttpResponse('This receipt could not be found')
