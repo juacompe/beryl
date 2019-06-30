@@ -4,6 +4,7 @@ from finance.models import Invoice, Receipt
 from datetime import datetime
 from finance.models import Invoice
 from finance.excel import excel_style, create_excel_with, write_receipt, write_invoice
+from finance.excel_xlsxwriter import Spreadsheet
 from finance.utils import number_to_currency
 
 
@@ -72,9 +73,18 @@ def export_receipt_as_excel(request,rep_id):
     timestamp = datetime.now()
     try:
         receipt = Receipt.objects.get(id = rep_id)
-        filename_save, resp = create_excel_with(settings.REP_TEMPLATE, receipt, timestamp, write_receipt)
+        filename_save = Spreadsheet.get_file_name(receipt.id, timestamp)
+        s = Spreadsheet(Spreadsheet.get_file_path(receipt.id, timestamp), settings.LOGO_PATH)
+        s.set_invoice_number(receipt.invoice.id)
+        s.set_receipt_id(receipt.id)
+        s.set_date(timestamp)
+        s.set_items(receipt.items.all())
+        s.set_total(receipt.total())
+        s.create()
+        resp = s.get_binary_content()
+
         response = HttpResponse(resp, mimetype='application/ms-excel')
-        response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
+        response['Content-Disposition'] = 'attachment; filename=%s.xlsx' % (unicode(filename_save),)
 
         repobj = Receipt.objects.get(id=rep_id)
         repobj.date_paid = timestamp

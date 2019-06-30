@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import xlsxwriter
+import os, tempfile
 
 def create_sample_receipt():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
@@ -12,14 +13,20 @@ def create_sample_receipt():
     s.set_receipt_id(receipt_id)
     s.set_date(timestamp)
     s.set_items([
-        {'name': 'Fees', 'amount': 58000},
-        {'name': 'Instructional Materials', 'amount': 12000},
+        MockItem('Fees',  58000),
+        MockItem('Instructional Materials', 12000),
     ])
     s.set_total(70000)
     s.create()
 
+class MockItem(object):
+    def __init__(self, name, amount):
+        self.name = name
+        self.amount = amount
+
 class Spreadsheet(object):
     def __init__(self, filename, logo):
+        self.filename = filename
         self.workbook = xlsxwriter.Workbook(filename)
         self.logo = logo
         self.styles = {}
@@ -68,6 +75,17 @@ class Spreadsheet(object):
     @staticmethod
     def get_file_name(receipt_id, timestamp):
         return 'rep_' + str(receipt_id) + '_'+ str(timestamp).replace('.','_') 
+
+    @staticmethod
+    def get_file_path(receipt_id, timestamp):
+        filename = Spreadsheet.get_file_name(receipt_id, timestamp)
+        return os.path.join(tempfile.mkdtemp(), filename) 
+
+    def get_binary_content(self):
+        fh = open(self.filename, 'rb')
+        resp = fh.read()
+        fh.close()
+        return resp
 
     def create_body(self):
         worksheet = self.worksheet
@@ -170,13 +188,13 @@ class Spreadsheet(object):
 
     def get_name(self, row):
         try:
-            return self.items[row]['name']
+            return self.items[row].name
         except IndexError:
             return ''
 
     def get_amount(self, row):
         try:
-            return self.items[row]['amount']
+            return self.items[row].amount
         except IndexError:
             return ''
 
