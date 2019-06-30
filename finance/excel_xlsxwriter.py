@@ -143,13 +143,12 @@ class Spreadsheet(object):
         self.worksheet.write('D%s'%(self.desc_row-1), 'Class :', fmt)
 
     def create_table(self):
-        fmt = self.workbook.add_format()
+        header = self.workbook.add_format()
         body = self.workbook.add_format()
-        body.set_num_format('#,##0.00')
         self.set_table_body(body)
-        self.set_table_header(fmt)
-        self.worksheet.merge_range('A%s:D%s' % (self.desc_row, self.desc_row), 'Description', fmt)
-        self.worksheet.write('E%s'%self.desc_row, u'฿  Amount', fmt)
+        self.set_table_header(header)
+        self.worksheet.merge_range('A%s:D%s' % (self.desc_row, self.desc_row), 'Description', header)
+        self.worksheet.write('E%s'%self.desc_row, u'฿  Amount', header)
         def desc(row):
             self.worksheet.merge_range('A%s:D%s'%(self.desc_row+1+row, self.desc_row+1+row), self.get_name(row), body)
         def amount(row):
@@ -159,10 +158,7 @@ class Spreadsheet(object):
         total = self.workbook.add_format()
         self.set_table_header(total)
         self.worksheet.merge_range('A34:D34', 'TOTAL   (Baht)', total)
-        number = self.workbook.add_format()
-        number.set_num_format('#,##0.00')
-        self.set_table_header(number)
-        self.worksheet.write('E34', self.total, number)
+        self.worksheet.write('E34', self.total, header)
 
     def get_name(self, row):
         try:
@@ -179,6 +175,7 @@ class Spreadsheet(object):
     def set_table_body(self, fmt):
         fmt.set_font_name('Arial')
         fmt.set_font_size(12)
+        fmt.set_num_format('#,##0.00')
         fmt.set_top(1)
         fmt.set_bottom(1)
         fmt.set_left(1)
