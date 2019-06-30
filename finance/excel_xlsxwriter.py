@@ -41,8 +41,6 @@ class Spreadsheet(object):
         worksheet.set_column('B:B', 19)
         worksheet.set_column('C:C', 59)
         worksheet.set_column('E:E', 19)
-        worksheet.write('A%s'%(self.no_row+0), 'No.')
-        worksheet.write('A%s'%(self.no_row+1), 'Date.')
         worksheet.write('A%s'%(self.no_row+3), 'Receive with thanks from:')
         worksheet.write('A%s'%(self.no_row+4), 'Name of student:')
         worksheet.write('A%s'%(self.no_row+5), 'Address:')
@@ -96,9 +94,12 @@ class Spreadsheet(object):
 
     def create_for_invoice(self):
         fmt = self.workbook.add_format()
-        fmt.set_align('right')
         fmt.set_font_name('Arial')
+        # fmt.set_bg_color('#cccccc')
+        fmt.set_align('right')
         self.worksheet.write('D7', 'for invoice (optional): ', fmt)
+        self.worksheet.write('A%s'%(self.no_row+0), 'No.')
+        self.worksheet.write('A%s'%(self.no_row+1), 'Date.')
 
     def create_class(self):
         fmt = self.workbook.add_format()
