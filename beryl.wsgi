@@ -8,7 +8,7 @@ sys.setdefaultencoding('utf-8')
 CUR_DIR = os.path.abspath(os.path.dirname(__file__))
 PARENT_DIR = os.path.abspath(os.path.dirname(CUR_DIR))
 ##/ve/bargain/
-ALLDIRS = ['/home/www-data/beryl/beryl_env/lib/python2.6/site-packages/']
+ALLDIRS = ['/home/www-data/beryl/beryl_env27/lib/python2.7/site-packages/']
 prev_sys_path = list(sys.path)
 
 for directory in ALLDIRS:
