@@ -3,11 +3,14 @@ import xlsxwriter
 
 def create_sample_receipt():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
+    timestamp = '2019-06-30 11:47:32.832423'
+    receipt_id = 2
+    print Spreadsheet.get_file_name(receipt_id, timestamp)
     filename = "/tmp/receipt.xlsx"
     s = Spreadsheet(filename, logo)
     s.set_invoice_number(1)
-    s.set_receipt_id(2)
-    s.set_date('2019-06-30 11:47:32.832423')
+    s.set_receipt_id(receipt_id)
+    s.set_date(timestamp)
     s.set_items([
         {'name': 'Fees', 'amount': 58000},
         {'name': 'Instructional Materials', 'amount': 12000},
@@ -61,6 +64,10 @@ class Spreadsheet(object):
 
     def set_total(self, t):
         self.total = t
+
+    @staticmethod
+    def get_file_name(receipt_id, timestamp):
+        return 'rep_' + str(receipt_id) + '_'+ str(timestamp).replace('.','_') 
 
     def create_body(self):
         worksheet = self.worksheet
