@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 import xlsxwriter
-#from django.conf import settings
 
-def create_receipt():
+def create_sample_receipt():
+    logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
     filename = "/tmp/receipt.xlsx"
-    s = Spreadsheet(filename)
+    s = Spreadsheet(filename, logo)
     s.close()
 
 class Spreadsheet(object):
-    def __init__(self, filename):
+    def __init__(self, filename, logo):
         self.workbook = xlsxwriter.Workbook(filename)
+        self.logo = logo
         self.styles = {}
         self.workbook.set_size(1000, 1200)
         self.styles['bold'] = self.workbook.add_format({'bold': True})
@@ -51,9 +52,7 @@ class Spreadsheet(object):
         worksheet.set_row(35, 40)
 
     def create_logo(self):
-        # logo = settings.LOGO_PATH
-        logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
-        self.worksheet.insert_image('A1', logo, {'x_scale': 1, 'y_scale': 0.86})
+        self.worksheet.insert_image('A1', self.logo, {'x_scale': 1, 'y_scale': 0.86})
 
     def create_style_school_name(self):
         fmt = self.workbook.add_format()
