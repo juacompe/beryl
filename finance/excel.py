@@ -4,9 +4,7 @@ from xlwt import easyxf,Bitmap
 from xlutils.copy import copy
 import os, tempfile
 from django.conf import settings
-
-from finance.models import InvoiceItem
-from finance.utils import number_to_currency
+from utils import number_to_currency
 
 def create_excel_with(template, receipt, timestamp, write_fn):
     #you need to have text_export.xls in your current path. It's a dummy file for invoice template
@@ -29,20 +27,20 @@ def create_excel_with(template, receipt, timestamp, write_fn):
 def write_invoice(template, invoice, timestamp, ws):
     style_amount, style_name = excel_style()
     #student_name
-    ws.write(12,2,invoice.get().student.full_name)
+    ws.write(12,2,invoice.student.full_name)
     #classroom
-    ws.write(12,5,invoice.get().student.class_room.year)
+    ws.write(12,5,invoice.student.class_room.year)
     #duedate
-    ws.write(11,2,str(invoice.get().deadline))
+    ws.write(11,2,str(invoice.deadline))
     #term (from settings.py)
     ws.write(10,2,settings.TERM)
     #invoice_item
-    items = InvoiceItem.objects.filter(invoice=invoice)
+    items = invoice.items.all()
     #write item in excel
     item_in_excel(ws,items,template)
     #item.total
-    ws.write(35,5,number_to_currency(invoice.get().total()),style_amount)
-    filename_save = 'inv_'+ str(invoice.get().id) + '_'+ str(timestamp).replace('.','_')
+    ws.write(35,5,number_to_currency(invoice.total()),style_amount)
+    filename_save = 'inv_'+ str(invoice.id) + '_'+ str(timestamp).replace('.','_')
     return filename_save
 
 def write_receipt(template, receipt, timestamp, ws):

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.conf import settings
-from finance.models import Invoice, InvoiceItem, Receipt
+from finance.models import Invoice, Receipt
 from datetime import datetime
 from finance.models import Invoice
 from finance.excel import excel_style, create_excel_with, write_receipt, write_invoice
@@ -10,9 +10,9 @@ from finance.utils import number_to_currency
 def invoice_detail(request, inv_id):
     if request.method == 'GET':
         #student = Student.objects.filter(id=student_id)
-        invoice = Invoice.objects.filter(id=inv_id)
+        invoice = Invoice.objects.get(id=inv_id)
         if invoice:
-            items = InvoiceItem.objects.filter(invoice=invoice)
+            items = invoice.items.all()
             invoice_item_html = ''
             for item in items:
                 invoice_item_html = invoice_item_html + '''<tr>
@@ -38,8 +38,8 @@ def invoice_detail(request, inv_id):
             </tr>
             <tr>
                 <td>Items</td>
-            </tr>''' % (inv_id, invoice.get().student.full_name, invoice.get().student.class_room.year,\
-                        number_to_currency(invoice.get().total()) ) + invoice_item_html
+            </tr>''' % (inv_id, invoice.student.full_name, invoice.student.class_room.year,\
+                        number_to_currency(invoice.total()) ) + invoice_item_html
 
             html = html + '''</tbody></table></body></html>'''
             invobj = Invoice.objects.get(id=inv_id)
@@ -52,8 +52,8 @@ def invoice_detail(request, inv_id):
 #need to be refactored if you use school as a service
 def export_invoice_as_excel(request,inv_id):
     style_amount, style_name = excel_style()
-    invoice = Invoice.objects.filter(id = inv_id)
-    if invoice:
+    try:
+        invoice = Invoice.objects.get(id = inv_id)
         timestamp = datetime.now()
         filename_save, resp = create_excel_with(settings.INV_TEMPLATE, invoice, timestamp, write_invoice)
         response = HttpResponse(resp, mimetype='application/ms-excel')
@@ -63,7 +63,7 @@ def export_invoice_as_excel(request,inv_id):
         invobj.save()
         print "status_code:" + str(response.status_code)
         return response
-    else:
+    except Invoice.DoesNotExist:
         print 'no invoice to export'
         return HttpResponse('This invoice could not be found')
 
