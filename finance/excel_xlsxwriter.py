@@ -142,14 +142,15 @@ class Spreadsheet(object):
     def create_table(self):
         fmt = self.workbook.add_format()
         body = self.workbook.add_format()
+        body.set_num_format('#,##0.00')
         self.set_table_body(body)
         self.set_table_header(fmt)
         self.worksheet.merge_range('A%s:D%s' % (self.desc_row, self.desc_row), 'Description', fmt)
         self.worksheet.write('E%s'%self.desc_row, u'฿  Amount', fmt)
         def desc(row):
-            self.worksheet.merge_range('A%s:D%s'%(self.desc_row+1+row, self.desc_row+1+row), self.get_name(row), fmt)
+            self.worksheet.merge_range('A%s:D%s'%(self.desc_row+1+row, self.desc_row+1+row), self.get_name(row), body)
         def amount(row):
-            self.worksheet.write('E%s'%(self.desc_row+1+row), self.get_amount(row), fmt)
+            self.worksheet.write('E%s'%(self.desc_row+1+row), self.get_amount(row), body)
         map(desc,range(0, 20))
         map(amount,range(0, 20))
         total = self.workbook.add_format()
