@@ -1,3 +1,6 @@
 django==1.2.7
 XlsxWriter==1.1.8
-psycopg2==2.2.2
+xlwt==0.7.2
+xlutils==1.4.1
+psycopg2==2.8.3
+
