@@ -5,13 +5,23 @@ def create_sample_receipt():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
     filename = "/tmp/receipt.xlsx"
     s = Spreadsheet(filename, logo)
-    s.close()
+    s.set_invoice_number(1)
+    s.set_receipt_id(2)
+    s.set_date('2019-06-30 11:47:32.832423')
+    s.set_items([
+        {'name': 'Fees', 'amount': 58000},
+        {'name': 'Instructional Materials', 'amount': 12000},
+    ])
+    s.set_total(70000)
+    s.create()
 
 class Spreadsheet(object):
     def __init__(self, filename, logo):
         self.workbook = xlsxwriter.Workbook(filename)
         self.logo = logo
         self.styles = {}
+
+    def create(self):
         self.workbook.set_size(1000, 1200)
         self.styles['bold'] = self.workbook.add_format({'bold': True})
         self.worksheet = self.workbook.add_worksheet()
@@ -30,13 +40,29 @@ class Spreadsheet(object):
         self.create_for_invoice()
         self.create_class()
         self.create_table()
-        self.write_body()
+        self.create_body()
         self.create_footer()
+        self.close()
 
     def close(self):
         self.workbook.close()
 
-    def write_body(self):
+    def set_invoice_number(self, i):
+        self.invoice_number = i
+
+    def set_receipt_id(self, i):
+        self.receipt_id = i
+
+    def set_date(self, d):
+        self.timestamp = d
+
+    def set_items(self, items):
+        self.items = items
+
+    def set_total(self, t):
+        self.total = t
+
+    def create_body(self):
         worksheet = self.worksheet
         worksheet.set_column('A:A', 6)
         worksheet.set_column('B:B', 19)
@@ -96,9 +122,15 @@ class Spreadsheet(object):
         fmt.set_font_name('Arial')
         # fmt.set_bg_color('#cccccc')
         fmt.set_align('right')
-        self.worksheet.write('D7', 'for invoice (optional): ', fmt)
+        left = self.workbook.add_format()
+        left.set_font_name('Arial')
+        left.set_align('left')
+        self.worksheet.write('D%s'%(self.no_row+0), 'for invoice (optional): ', fmt)
+        self.worksheet.write('E%s'%(self.no_row+0), self.invoice_number, left)
         self.worksheet.write('A%s'%(self.no_row+0), 'No.')
+        self.worksheet.write('B%s'%(self.no_row+0), self.receipt_id, left)
         self.worksheet.write('A%s'%(self.no_row+1), 'Date.')
+        self.worksheet.write('B%s'%(self.no_row+1), self.timestamp, left)
 
     def create_class(self):
         fmt = self.workbook.add_format()
@@ -109,28 +141,50 @@ class Spreadsheet(object):
 
     def create_table(self):
         fmt = self.workbook.add_format()
+        body = self.workbook.add_format()
+        self.set_table_body(body)
         self.set_table_header(fmt)
         self.worksheet.merge_range('A%s:D%s' % (self.desc_row, self.desc_row), 'Description', fmt)
         self.worksheet.write('E%s'%self.desc_row, u'฿  Amount', fmt)
         def desc(row):
-            self.worksheet.merge_range('A%s:D%s'%(row, row), '', fmt)
+            self.worksheet.merge_range('A%s:D%s'%(self.desc_row+1+row, self.desc_row+1+row), self.get_name(row), fmt)
         def amount(row):
-            self.worksheet.write('E%s'%row, '', fmt)
-        map(desc,range(self.desc_row+1, 34))
-        map(amount,range(self.desc_row+1, 35))
+            self.worksheet.write('E%s'%(self.desc_row+1+row), self.get_amount(row), fmt)
+        map(desc,range(0, 20))
+        map(amount,range(0, 20))
         total = self.workbook.add_format()
         self.set_table_header(total)
         self.worksheet.merge_range('A34:D34', 'TOTAL   (Baht)', total)
+        number = self.workbook.add_format()
+        number.set_num_format('#,##0.00')
+        self.set_table_header(number)
+        self.worksheet.write('E34', self.total, number)
 
-    def set_table_header(self, fmt):
+    def get_name(self, row):
+        try:
+            return self.items[row]['name']
+        except IndexError:
+            return ''
+
+    def get_amount(self, row):
+        try:
+            return self.items[row]['amount']
+        except IndexError:
+            return ''
+
+    def set_table_body(self, fmt):
         fmt.set_font_name('Arial')
-        fmt.set_bold()
-        fmt.set_font_size(15)
-        fmt.set_align('center')
+        fmt.set_font_size(12)
         fmt.set_top(1)
         fmt.set_bottom(1)
         fmt.set_left(1)
         fmt.set_right(1)
+
+    def set_table_header(self, fmt):
+        self.set_table_body(fmt)
+        fmt.set_bold()
+        fmt.set_font_size(15)
+        fmt.set_align('center')
 
     def create_footer(self):
         fmt = self.workbook.add_format()
