@@ -208,7 +208,7 @@ class ReceiptSheet(Spreadsheet):
         self.create_for_invoice()
 
     def create_for_invoice(self):
-        no_row = self.before_table_row 
+        no_row = self.before_table_row + 1 
         fmt = self.workbook.add_format()
         fmt.set_font_name('Arial')
         # fmt.set_bg_color('#cccccc')
