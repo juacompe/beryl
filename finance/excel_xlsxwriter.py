@@ -17,7 +17,7 @@ class Spreadsheet(object):
         self.before_table_row = 7
         self.title_row = self.before_table_row + 2
         self.desc_row = self.title_row + 4
-        self.after_table_row = 35 
+        self.after_table_row = self.desc_row + 22
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
@@ -111,9 +111,10 @@ class Spreadsheet(object):
         map(desc,range(0, 20))
         map(amount,range(0, 20))
         total = self.workbook.add_format()
+        total_row = self.desc_row + 21
         self.set_table_header(total)
-        self.worksheet.merge_range('A34:D34', 'TOTAL   (Baht)', total)
-        self.worksheet.write('E34', self.total, header)
+        self.worksheet.merge_range('A%s:D%s'%(total_row, total_row), 'TOTAL   (Baht)', total)
+        self.worksheet.write('E%s'%total_row, self.total, header)
 
     def set_table_body(self, fmt):
         fmt.set_font_name('Arial')
@@ -245,7 +246,13 @@ class InvoiceSheet(Spreadsheet):
         return 'INVOICE' 
 
     def create_content_before_table(self):
-        pass
+        row = self.title_row + 1
+        fmt = self.create_style_body('left')
+        bold = self.create_style_body('left')
+        bold.set_bold()
+        self.worksheet.write('A%s'%(row), 'Dear Parent,', fmt)
+        self.worksheet.write('A%s'%(row+1), "This is a break down of the payment of your child's school fees. ", fmt)
+        self.worksheet.write('A%s'%(row+2), 'Please do not lose this form and return it together with the tuition fee on or before the due date.', bold)
 
     def create_footer(self):
         head = self.create_style_footer_align('left')
@@ -266,12 +273,16 @@ class InvoiceSheet(Spreadsheet):
         self.worksheet.merge_range('B%s:E%s'%(footer_row+4, footer_row+4), 'A pupil is not officially enrolled until payment of fees.  As such, the pupil may be suspended from attending classes.', fmt)
 
     def create_style_footer_align(self, align):
-        fmt = self.workbook.add_format()
-        fmt.set_font_name('Arial')
-        fmt.set_align(align)
+        fmt = self.create_style_body(align)
         fmt.set_font_size(9)
         fmt.set_bold()
         fmt.set_text_wrap()
+        return fmt
+
+    def create_style_body(self, align):
+        fmt = self.workbook.add_format()
+        fmt.set_font_name('Arial')
+        fmt.set_align(align)
         return fmt
         
     def get_last_row(self):
