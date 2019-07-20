@@ -16,7 +16,7 @@ class Spreadsheet(object):
         self.line_row = 7
         self.before_table_row = 7
         self.title_row = self.before_table_row + 2
-        self.desc_row = self.title_row + 4
+        self.desc_row = self.title_row + 8
         self.after_table_row = self.desc_row + 22
         A4 = 9
         self.worksheet.set_paper(A4)
@@ -89,13 +89,6 @@ class Spreadsheet(object):
         self.worksheet.write('C%s'%self.line_row, '', double_bottom_lines)
         self.worksheet.write('D%s'%self.line_row, '', double_bottom_lines)
         self.worksheet.write('E%s'%self.line_row, '', double_bottom_lines)
-
-    def create_class(self):
-        fmt = self.workbook.add_format()
-        fmt.set_align('right')
-        fmt.set_font_name('Arial')
-        fmt.set_bold()
-        self.worksheet.write('D%s'%(self.desc_row-1), 'Class :', fmt)
 
     def create_table(self):
         header = self.workbook.add_format()
@@ -219,6 +212,13 @@ class ReceiptSheet(Spreadsheet):
         self.worksheet.write('A%s'%(no_row+1), 'Date.')
         self.worksheet.write('B%s'%(no_row+1), self.timestamp, left)
 
+    def create_class(self):
+        fmt = self.workbook.add_format()
+        fmt.set_align('right')
+        fmt.set_font_name('Arial')
+        fmt.set_bold()
+        self.worksheet.write('D%s'%(self.desc_row-1), 'Class :', fmt)
+
     def create_footer(self):
         fmt = self.workbook.add_format()
         fmt.set_font_name('Arial')
@@ -253,6 +253,18 @@ class InvoiceSheet(Spreadsheet):
         self.worksheet.write('A%s'%(row), 'Dear Parent,', fmt)
         self.worksheet.write('A%s'%(row+1), "This is a break down of the payment of your child's school fees. ", fmt)
         self.worksheet.write('A%s'%(row+2), 'Please do not lose this form and return it together with the tuition fee on or before the due date.', bold)
+        self.worksheet.write('A%s'%(row+3), 'School Term :', bold)
+        self.term = 'Second Term   (Jan 06, 2011 to Apr 1, 2011)'
+        self.worksheet.write('C%s'%(row+3), self.term, fmt)
+        self.worksheet.write('A%s'%(row+4), 'Last Fee Due Date : ', bold)
+        self.worksheet.write('C%s'%(row+4), self.deadline, fmt)
+        self.worksheet.write('A%s'%(row+5), "Child's Name : ", bold)
+        self.worksheet.write('C%s'%(row+5), self.child_name, fmt)
+        self.worksheet.write('D%s'%(row+5), 'Class :', bold)
+        self.worksheet.write('E%s'%(row+5), self.class_room, fmt)
+
+    def create_class(self):
+        pass
 
     def create_footer(self):
         head = self.create_style_footer_align('left')
@@ -287,3 +299,12 @@ class InvoiceSheet(Spreadsheet):
         
     def get_last_row(self):
         return self.after_table_row + 10 
+
+    def set_child_name(self, cn):
+        self.child_name = cn
+
+    def set_deadline(self, d):
+        self.deadline = d
+
+    def set_class_room(self, c):
+        self.class_room = c

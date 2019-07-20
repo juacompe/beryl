@@ -32,6 +32,9 @@ def create_sample_invoice():
     id = 12
     timestamp = '2019-06-30 11:47:32.832423'
     print InvoiceSheet.get_file_name(id, timestamp)
+    s.set_child_name('VITO  SAGHIEH')
+    s.set_deadline('2019-09-22 08:44:01')
+    s.set_class_room('K2')
     s.set_items([
         MockItem('Fees',  58000),
         MockItem('Instructional Materials', 12000),
