@@ -20,6 +20,10 @@ class Spreadsheet(object):
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
+        self.worksheet.set_column('A:A', 6)
+        self.worksheet.set_column('B:B', 19)
+        self.worksheet.set_column('C:C', 59)
+        self.worksheet.set_column('E:E', 19)
         self.worksheet.print_area('A1:E38')
         self.create_logo()
         self.create_style_school_name()
@@ -125,19 +129,14 @@ class Spreadsheet(object):
         fmt.set_align('center')
 
     def create_body(self):
-        worksheet = self.worksheet
-        worksheet.set_column('A:A', 6)
-        worksheet.set_column('B:B', 19)
-        worksheet.set_column('C:C', 59)
-        worksheet.set_column('E:E', 19)
-        worksheet.write('A%s'%(self.before_table_row+3), 'Receive with thanks from:')
-        worksheet.write('A%s'%(self.before_table_row+4), 'Name of student:')
-        worksheet.write('A%s'%(self.before_table_row+5), 'Address:')
-        worksheet.write('A35', 'Thank you very much for your kind support.')
-        worksheet.set_row(9, 40)
-        worksheet.set_row(11, 40)
-        worksheet.set_row(34, 40)
-        worksheet.set_row(35, 40)
+        self.worksheet.write('A%s'%(self.before_table_row+3), 'Receive with thanks from:')
+        self.worksheet.write('A%s'%(self.before_table_row+4), 'Name of student:')
+        self.worksheet.write('A%s'%(self.before_table_row+5), 'Address:')
+        self.worksheet.write('A35', 'Thank you very much for your kind support.')
+        self.worksheet.set_row(9, 40)
+        self.worksheet.set_row(11, 40)
+        self.worksheet.set_row(34, 40)
+        self.worksheet.set_row(35, 40)
 
     def create_footer(self):
         fmt = self.workbook.add_format()
