@@ -164,6 +164,12 @@ class Spreadsheet(object):
     def set_total(self, t):
         self.total = t
 
+    def get_binary_content(self):
+        fh = open(self.filename, 'rb')
+        resp = fh.read()
+        fh.close()
+        return resp
+
 
 class ReceiptSheet(Spreadsheet):
     def set_receipt_id(self, i):
@@ -180,12 +186,6 @@ class ReceiptSheet(Spreadsheet):
     def get_file_path(receipt_id, timestamp):
         filename = ReceiptSheet.get_file_name(receipt_id, timestamp)
         return os.path.join(tempfile.mkdtemp(), filename)
-
-    def get_binary_content(self):
-        fh = open(self.filename, 'rb')
-        resp = fh.read()
-        fh.close()
-        return resp
 
     def get_title(self):
         return 'RECEIPT'
@@ -241,6 +241,11 @@ class InvoiceSheet(Spreadsheet):
     @staticmethod
     def get_file_name(id, timestamp):
         return 'inv_' + str(id) + '_'+ str(timestamp).replace('.','_')
+
+    @staticmethod
+    def get_file_path(id, timestamp):
+        filename = InvoiceSheet.get_file_name(id, timestamp)
+        return os.path.join(tempfile.mkdtemp(), filename)
 
     def get_title(self):
         return 'INVOICE' 

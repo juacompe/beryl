@@ -4,7 +4,7 @@ from finance.models import Invoice, Receipt
 from datetime import datetime
 from finance.models import Invoice
 from finance.excel import excel_style, create_excel_with, write_receipt, write_invoice
-from finance.excel_xlsxwriter import ReceiptSheet
+from finance.excel_xlsxwriter import InvoiceSheet, ReceiptSheet
 from finance.utils import number_to_currency
 
 
@@ -52,13 +52,22 @@ def invoice_detail(request, inv_id):
 
 #need to be refactored if you use school as a service
 def export_invoice_as_excel(request,inv_id):
-    style_amount, style_name = excel_style()
+    timestamp = datetime.now()
     try:
         invoice = Invoice.objects.get(id = inv_id)
-        timestamp = datetime.now()
-        filename_save, resp = create_excel_with(settings.INV_TEMPLATE, invoice, timestamp, write_invoice)
+        filename_save = InvoiceSheet.get_file_name(inv_id, timestamp)
+        path = InvoiceSheet.get_file_path(inv_id, timestamp)
+        s = InvoiceSheet(path, settings.LOGO_PATH)
+        s.set_child_name(invoice.student.full_name)
+        s.set_deadline(str(invoice.deadline))
+        s.set_class_room(invoice.student.class_room.year)
+        s.set_items(invoice.items.all())
+        s.set_total(invoice.total())
+        s.create()
+        resp = s.get_binary_content()
+
         response = HttpResponse(resp, mimetype='application/ms-excel')
-        response['Content-Disposition'] = 'attachment; filename=%s.xls' % (unicode(filename_save),)
+        response['Content-Disposition'] = 'attachment; filename=%s.xlsx' % (unicode(filename_save),)
         invobj = Invoice.objects.get(id=inv_id)
         invobj.date_viewed = datetime.now()
         invobj.save()
@@ -74,7 +83,8 @@ def export_receipt_as_excel(request,rep_id):
     try:
         receipt = Receipt.objects.get(id = rep_id)
         filename_save = ReceiptSheet.get_file_name(receipt.id, timestamp)
-        s = ReceiptSheet(ReceiptSheet.get_file_path(receipt.id, timestamp), settings.LOGO_PATH)
+        path = ReceiptSheet.get_file_path(receipt.id, timestamp)
+        s = ReceiptSheet(path, settings.LOGO_PATH)
         s.set_invoice_number(receipt.invoice.id)
         s.set_receipt_id(receipt.id)
         s.set_date(timestamp)

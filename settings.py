@@ -130,5 +130,5 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 TERM = 'Second Term   (Jan 06, 2011 to Apr 1, 2011)'
 INV_TEMPLATE = join_with_project_path('media','invoice_template.xls')
 REP_TEMPLATE = join_with_project_path('media','receipt_template.xls')
-LOGO_PATH = join_with_project_path('media','rcis_logo.bmp')
+LOGO_PATH = join_with_project_path('media','rcis_logo.png')
 
