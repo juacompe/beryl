@@ -4,7 +4,7 @@ from finance.models import Invoice, Receipt
 from datetime import datetime
 from finance.models import Invoice
 from finance.excel import excel_style, create_excel_with, write_receipt, write_invoice
-from finance.excel_xlsxwriter import Spreadsheet
+from finance.excel_xlsxwriter import ReceiptSheet
 from finance.utils import number_to_currency
 
 
@@ -73,8 +73,8 @@ def export_receipt_as_excel(request,rep_id):
     timestamp = datetime.now()
     try:
         receipt = Receipt.objects.get(id = rep_id)
-        filename_save = Spreadsheet.get_file_name(receipt.id, timestamp)
-        s = Spreadsheet(Spreadsheet.get_file_path(receipt.id, timestamp), settings.LOGO_PATH)
+        filename_save = ReceiptSheet.get_file_name(receipt.id, timestamp)
+        s = ReceiptSheet(ReceiptSheet.get_file_path(receipt.id, timestamp), settings.LOGO_PATH)
         s.set_invoice_number(receipt.invoice.id)
         s.set_receipt_id(receipt.id)
         s.set_date(timestamp)

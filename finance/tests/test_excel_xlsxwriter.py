@@ -1,5 +1,5 @@
 from django.test import TestCase
-from finance.excel_xlsxwriter import Spreadsheet, Invoice
+from finance.excel_xlsxwriter import ReceiptSheet, Invoice
 
 class TestSpreadsheet(TestCase):
     def test_create_receipt(self):
@@ -7,15 +7,14 @@ class TestSpreadsheet(TestCase):
 
     def test_create_invoice(self):
         create_sample_invoice()
-        self.assertEqual(1, 2)
 
 def create_sample_receipt():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
     timestamp = '2019-06-30 11:47:32.832423'
     receipt_id = 2
-    print Spreadsheet.get_file_name(receipt_id, timestamp)
+    print ReceiptSheet.get_file_name(receipt_id, timestamp)
     filename = "/tmp/receipt.xlsx"
-    s = Spreadsheet(filename, logo)
+    s = ReceiptSheet(filename, logo)
     s.set_invoice_number(1)
     s.set_receipt_id(receipt_id)
     s.set_date(timestamp)

@@ -3,6 +3,9 @@ import xlsxwriter
 import os, tempfile
 
 class Spreadsheet(object):
+    pass
+
+class ReceiptSheet(Spreadsheet):
     def __init__(self, filename, logo):
         self.filename = filename
         self.workbook = xlsxwriter.Workbook(filename)
@@ -56,7 +59,7 @@ class Spreadsheet(object):
 
     @staticmethod
     def get_file_path(receipt_id, timestamp):
-        filename = Spreadsheet.get_file_name(receipt_id, timestamp)
+        filename = ReceiptSheet.get_file_name(receipt_id, timestamp)
         return os.path.join(tempfile.mkdtemp(), filename)
 
     def get_binary_content(self):
@@ -218,8 +221,8 @@ class Invoice(object):
         self.styles['bold'] = self.workbook.add_format({'bold': True})
         self.worksheet = self.workbook.add_worksheet()
         self.no_row = 7
-        self.receipt_row = self.no_row + 2
-        self.desc_row = self.receipt_row + 4
+        self.title_row = self.no_row + 2
+        self.desc_row = self.title_row + 4
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
