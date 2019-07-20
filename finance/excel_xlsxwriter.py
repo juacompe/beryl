@@ -52,12 +52,12 @@ class Spreadsheet(object):
 
     @staticmethod
     def get_file_name(receipt_id, timestamp):
-        return 'rep_' + str(receipt_id) + '_'+ str(timestamp).replace('.','_') 
+        return 'rep_' + str(receipt_id) + '_'+ str(timestamp).replace('.','_')
 
     @staticmethod
     def get_file_path(receipt_id, timestamp):
         filename = Spreadsheet.get_file_name(receipt_id, timestamp)
-        return os.path.join(tempfile.mkdtemp(), filename) 
+        return os.path.join(tempfile.mkdtemp(), filename)
 
     def get_binary_content(self):
         fh = open(self.filename, 'rb')
@@ -201,3 +201,69 @@ class Spreadsheet(object):
         self.worksheet.write('C37', '', underline)
         self.worksheet.write('B38', 'Receive by: ', fmt)
         self.worksheet.write('C38', '', underline)
+
+class Invoice(object):
+    @staticmethod
+    def get_file_name(id, timestamp):
+        return 'inv_' + str(id) + '_'+ str(timestamp).replace('.','_')
+
+    def __init__(self, filename, logo):
+        self.filename = filename
+        self.workbook = xlsxwriter.Workbook(filename)
+        self.logo = logo
+        self.styles = {}
+
+    def create(self):
+        self.workbook.set_size(1000, 1200)
+        self.styles['bold'] = self.workbook.add_format({'bold': True})
+        self.worksheet = self.workbook.add_worksheet()
+        self.no_row = 7
+        self.receipt_row = self.no_row + 2
+        self.desc_row = self.receipt_row + 4
+        A4 = 9
+        self.worksheet.set_paper(A4)
+        self.worksheet.fit_to_pages(1, 1)
+        self.worksheet.print_area('A1:E38')
+        self.create_logo()
+        self.create_style_school_name()
+        self.create_style_sub_title()
+        self.create_title()
+        #self.create_address()
+        #self.create_for_invoice()
+        #self.create_class()
+        #self.create_table()
+        #self.create_body()
+        #self.create_footer()
+        self.close()
+
+    def close(self):
+        self.workbook.close()
+
+    def create_logo(self):
+        self.worksheet.insert_image('A1', self.logo, {'x_scale': 0.95, 'y_scale': 0.81})
+
+    def create_style_school_name(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_font_size(20)
+        fmt.set_font_color('#006737')
+        fmt.set_align('center')
+        fmt.set_font_name('Times')
+        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', fmt)
+
+    def create_style_sub_title(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_align('center')
+        fmt.set_font_size(15)
+        fmt.set_font_name('Times')
+        self.worksheet.write('C3', 'Nursery, Pre-School and Elementary', fmt)
+
+    def create_title(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_font_size(20)
+        fmt.set_underline()
+        fmt.set_font_name('Arial')
+        fmt.set_align('center')
+        self.worksheet.write('C%s'%self.title_row, 'INVOICE', fmt)

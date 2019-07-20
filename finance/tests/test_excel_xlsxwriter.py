@@ -1,9 +1,13 @@
 from django.test import TestCase
-from finance.excel_xlsxwriter import Spreadsheet
+from finance.excel_xlsxwriter import Spreadsheet, Invoice
 
 class TestSpreadsheet(TestCase):
-    def test_create(self):
+    def test_create_receipt(self):
         create_sample_receipt()
+
+    def test_create_invoice(self):
+        create_sample_invoice()
+        self.assertEqual(1, 2)
 
 def create_sample_receipt():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
@@ -20,6 +24,15 @@ def create_sample_receipt():
         MockItem('Instructional Materials', 12000),
     ])
     s.set_total(70000)
+    s.create()
+
+def create_sample_invoice():
+    logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
+    filename = "/tmp/invoice.xlsx"
+    s = Invoice(filename, logo)
+    id = 12
+    timestamp = '2019-06-30 11:47:32.832423'
+    print Invoice.get_file_name(id, timestamp)
     s.create()
 
 class MockItem(object):
