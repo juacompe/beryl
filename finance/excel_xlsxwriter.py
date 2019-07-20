@@ -29,6 +29,15 @@ class Spreadsheet(object):
         fmt.set_font_name('Times')
         self.worksheet.write('C3', 'Nursery, Pre-School and Elementary', fmt)
 
+    def create_title(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_font_size(20)
+        fmt.set_underline()
+        fmt.set_font_name('Arial')
+        fmt.set_align('center')
+        self.worksheet.write('C%s'%self.title_row, self.get_title(), fmt)
+
     def close(self):
         self.workbook.close()
 
@@ -38,8 +47,8 @@ class ReceiptSheet(Spreadsheet):
         self.styles['bold'] = self.workbook.add_format({'bold': True})
         self.worksheet = self.workbook.add_worksheet()
         self.no_row = 7
-        self.receipt_row = self.no_row + 2
-        self.desc_row = self.receipt_row + 4
+        self.title_row = self.no_row + 2
+        self.desc_row = self.title_row + 4
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
@@ -47,7 +56,7 @@ class ReceiptSheet(Spreadsheet):
         self.create_logo()
         self.create_style_school_name()
         self.create_style_sub_title()
-        self.create_receipt()
+        self.create_title()
         self.create_address()
         self.create_for_invoice()
         self.create_class()
@@ -112,14 +121,8 @@ class ReceiptSheet(Spreadsheet):
         self.worksheet.write('C5', address2, fmt)
         self.worksheet.write('C6', address3, fmt)
 
-    def create_receipt(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_font_size(20)
-        fmt.set_underline()
-        fmt.set_font_name('Arial')
-        fmt.set_align('center')
-        self.worksheet.write('C%s'%self.receipt_row, 'RECEIPT', fmt)
+    def get_title(self):
+        return 'RECEIPT'
 
     def create_for_invoice(self):
         fmt = self.workbook.add_format()
@@ -231,11 +234,5 @@ class InvoiceSheet(Spreadsheet):
         #self.create_footer()
         self.close()
 
-    def create_title(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_font_size(20)
-        fmt.set_underline()
-        fmt.set_font_name('Arial')
-        fmt.set_align('center')
-        self.worksheet.write('C%s'%self.title_row, 'INVOICE', fmt)
+    def get_title(self):
+        return 'INVOICE' 
