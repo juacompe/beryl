@@ -18,7 +18,6 @@ class Spreadsheet(object):
         self.title_row = self.before_table_row + 2
         self.desc_row = self.title_row + 4
         self.after_table_row = 35 
-        last_row = self.after_table_row + 5
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
@@ -26,7 +25,7 @@ class Spreadsheet(object):
         self.worksheet.set_column('B:B', 19)
         self.worksheet.set_column('C:C', 59)
         self.worksheet.set_column('E:E', 19)
-        self.worksheet.print_area('A1:E%s' % last_row)
+        self.worksheet.print_area('A1:E%s' % self.get_last_row())
         self.create_logo()
         self.create_style_school_name()
         self.create_style_sub_title()
@@ -147,23 +146,6 @@ class Spreadsheet(object):
         self.worksheet.write('A%s'%(self.after_table_row+1), 'Mrs.Chutamas Pattharamalai')
         self.worksheet.write('A%s'%(self.after_table_row+2), 'President')
 
-    def create_footer(self):
-        fmt = self.workbook.add_format()
-        fmt.set_font_name('Arial')
-        fmt.set_align('right')
-        underline = self.workbook.add_format()
-        underline.set_bottom(1)
-        footer_row = self.after_table_row+3 
-        self.worksheet.write('B%s'%(footer_row), 'cash/cheque#: ', fmt)
-        self.worksheet.set_row(footer_row-1, 40)
-        self.worksheet.write('C%s'%(footer_row), '', underline)
-        self.worksheet.write('D%s'%(footer_row), 'date: ', fmt)
-        self.worksheet.write('E%s'%(footer_row), '', underline)
-        self.worksheet.write('B%s'%(footer_row+1), 'Bank/Branch: ', fmt)
-        self.worksheet.write('C%s'%(footer_row+1), '', underline)
-        self.worksheet.write('B%s'%(footer_row+2), 'Receive by: ', fmt)
-        self.worksheet.write('C%s'%(footer_row+2), '', underline)
-
     def close(self):
         self.workbook.close()
 
@@ -214,6 +196,9 @@ class ReceiptSheet(Spreadsheet):
     def get_title(self):
         return 'RECEIPT'
 
+    def get_last_row(self):
+        return self.after_table_row + 5
+
     def create_content_before_table(self):
         self.create_for_invoice()
 
@@ -233,6 +218,23 @@ class ReceiptSheet(Spreadsheet):
         self.worksheet.write('A%s'%(no_row+1), 'Date.')
         self.worksheet.write('B%s'%(no_row+1), self.timestamp, left)
 
+    def create_footer(self):
+        fmt = self.workbook.add_format()
+        fmt.set_font_name('Arial')
+        fmt.set_align('right')
+        underline = self.workbook.add_format()
+        underline.set_bottom(1)
+        footer_row = self.after_table_row+3
+        self.worksheet.write('B%s'%(footer_row), 'cash/cheque#: ', fmt)
+        self.worksheet.set_row(footer_row-1, 40)
+        self.worksheet.write('C%s'%(footer_row), '', underline)
+        self.worksheet.write('D%s'%(footer_row), 'date: ', fmt)
+        self.worksheet.write('E%s'%(footer_row), '', underline)
+        self.worksheet.write('B%s'%(footer_row+1), 'Bank/Branch: ', fmt)
+        self.worksheet.write('C%s'%(footer_row+1), '', underline)
+        self.worksheet.write('B%s'%(footer_row+2), 'Receive by: ', fmt)
+        self.worksheet.write('C%s'%(footer_row+2), '', underline)
+
 
 class InvoiceSheet(Spreadsheet):
     @staticmethod
@@ -244,3 +246,21 @@ class InvoiceSheet(Spreadsheet):
 
     def create_content_before_table(self):
         pass
+
+    def create_footer(self):
+        fmt = self.workbook.add_format()
+        fmt.set_font_name('Arial')
+        fmt.set_align('left')
+        fmt.set_font_size(9)
+        fmt.set_bold()
+        fmt.set_text_wrap()
+        footer_row = self.after_table_row+4
+        self.worksheet.merge_range('A%s:E%s'%(footer_row, footer_row), 'Please take note of the following remarks:', fmt)
+        self.worksheet.merge_range('A%s:E%s'%(footer_row+1, footer_row+1), "1. No refund or reductions can be made in any fees for child's illness, temporary absence from school or change of plans.", fmt)
+        self.worksheet.merge_range('A%s:E%s'%(footer_row+2, footer_row+2), '2. Please be notified that the penalty of 100 Baht per day will be charged for late payment.', fmt)
+        self.worksheet.merge_range('A%s:E%s'%(footer_row+3, footer_row+3), '3. Payment should be made in Thai Baht by cash or cheque payable to "RUAM RUDEE LEARNING CENTRE" or "RC INTERNATIONAL SCHOOL" crossed "ACCOUNT PAYEE ONLY" and the words "OR BEARER" deleted.', fmt)
+        self.worksheet.set_row(footer_row+3-1, 25)
+        self.worksheet.merge_range('A%s:E%s'%(footer_row+4, footer_row+4), '4. A pupil is not officially enrolled until payment of fees.  As such, the pupil may be suspended from attending classes.', fmt)
+        
+    def get_last_row(self):
+        return self.after_table_row + 10 
