@@ -36,13 +36,17 @@ class Spreadsheet(object):
         self.worksheet.insert_image('A1', self.logo, {'x_scale': 0.95, 'y_scale': 0.81})
 
     def create_style_school_name(self):
+        self.worksheet.write('C1', 'RC INTERNATIONAL SCHOOL', self.create_style_school_with_size(20))
+        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', self.create_style_school_with_size(18))
+
+    def create_style_school_with_size(self, size):
         fmt = self.workbook.add_format()
         fmt.set_bold()
-        fmt.set_font_size(20)
+        fmt.set_font_size(size)
         fmt.set_font_color('#006737')
         fmt.set_align('center')
         fmt.set_font_name('Times')
-        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', fmt)
+        return fmt
 
     def create_style_sub_title(self):
         fmt = self.workbook.add_format()
