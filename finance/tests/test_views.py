@@ -15,7 +15,7 @@ from django.test.client import Client
 from django.contrib.auth.models import User
 from finance.models import Invoice, InvoiceItem, Receipt, ReceiptItem
 from school.models import Student, ClassRoom
-from finance.views import number_to_currency, excel_style
+from finance.views import number_to_currency
 from datetime import datetime
 
 class TestInvoiceReceipt(TestCase):
@@ -47,12 +47,3 @@ class TestInvoiceReceipt(TestCase):
         converted = number_to_currency(1000000)
         print converted
         self.failUnless('1,000,000.00' == converted)
-
-    def test_excel_style(self):
-        style_amount, style_name = excel_style()
-        print style_amount
-        print style_name
-        self.assertNotEqual('',style_amount)
-        self.assertNotEqual('',style_name)
-#<xlwt.Style.XFStyle object at 0x02A84E30>
-#<xlwt.Style.XFStyle object at 0x02A84670>
