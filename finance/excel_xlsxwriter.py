@@ -18,6 +18,7 @@ class Spreadsheet(object):
         self.title_row = self.before_table_row + 2
         self.desc_row = self.title_row + 4
         self.after_table_row = 35 
+        last_row = self.after_table_row + 5
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
@@ -25,7 +26,7 @@ class Spreadsheet(object):
         self.worksheet.set_column('B:B', 19)
         self.worksheet.set_column('C:C', 59)
         self.worksheet.set_column('E:E', 19)
-        self.worksheet.print_area('A1:E38')
+        self.worksheet.print_area('A1:E%s' % last_row)
         self.create_logo()
         self.create_style_school_name()
         self.create_style_sub_title()
@@ -33,8 +34,9 @@ class Spreadsheet(object):
         self.create_address()
         self.create_content_before_table()
         self.create_class()
+        self.create_content_before_table()
         self.create_table()
-        self.create_body()
+        self.create_content_after_table()
         self.create_footer()
         self.close()
 
@@ -129,7 +131,7 @@ class Spreadsheet(object):
         fmt.set_font_size(15)
         fmt.set_align('center')
 
-    def create_body(self):
+    def create_content_before_table(self):
         receive_with_thanks_row = self.before_table_row+3
         address_row = self.before_table_row+5
         self.worksheet.write('A%s'%receive_with_thanks_row, 'Receive with thanks from:')
@@ -137,9 +139,13 @@ class Spreadsheet(object):
         self.worksheet.write('A%s'%(self.before_table_row+4), 'Name of student:')
         self.worksheet.write('A%s'%address_row, 'Address:')
         self.worksheet.set_row(address_row-1, 40)
+
+    def create_content_after_table(self):
         self.worksheet.set_row(self.after_table_row-1, 40)
         self.worksheet.write('A%s'%self.after_table_row, 'Thank you very much for your kind support.')
         self.worksheet.set_row(self.after_table_row, 40)
+        self.worksheet.write('A%s'%(self.after_table_row+1), 'Mrs.Chutamas Pattharamalai')
+        self.worksheet.write('A%s'%(self.after_table_row+2), 'President')
 
     def create_footer(self):
         fmt = self.workbook.add_format()
@@ -147,14 +153,16 @@ class Spreadsheet(object):
         fmt.set_align('right')
         underline = self.workbook.add_format()
         underline.set_bottom(1)
-        self.worksheet.write('B36', 'cash/cheque#: ', fmt)
-        self.worksheet.write('C36', '', underline)
-        self.worksheet.write('D36', 'date: ', fmt)
-        self.worksheet.write('E36', '', underline)
-        self.worksheet.write('B37', 'Bank/Branch: ', fmt)
-        self.worksheet.write('C37', '', underline)
-        self.worksheet.write('B38', 'Receive by: ', fmt)
-        self.worksheet.write('C38', '', underline)
+        footer_row = self.after_table_row+3 
+        self.worksheet.write('B%s'%(footer_row), 'cash/cheque#: ', fmt)
+        self.worksheet.set_row(footer_row-1, 40)
+        self.worksheet.write('C%s'%(footer_row), '', underline)
+        self.worksheet.write('D%s'%(footer_row), 'date: ', fmt)
+        self.worksheet.write('E%s'%(footer_row), '', underline)
+        self.worksheet.write('B%s'%(footer_row+1), 'Bank/Branch: ', fmt)
+        self.worksheet.write('C%s'%(footer_row+1), '', underline)
+        self.worksheet.write('B%s'%(footer_row+2), 'Receive by: ', fmt)
+        self.worksheet.write('C%s'%(footer_row+2), '', underline)
 
     def close(self):
         self.workbook.close()
