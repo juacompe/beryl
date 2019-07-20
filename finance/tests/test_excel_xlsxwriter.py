@@ -32,7 +32,6 @@ def create_sample_invoice():
     id = 12
     timestamp = '2019-06-30 11:47:32.832423'
     print InvoiceSheet.get_file_name(id, timestamp)
-    s.set_invoice_number(1)
     s.set_items([
         MockItem('Fees',  58000),
         MockItem('Instructional Materials', 12000),

@@ -13,8 +13,9 @@ class Spreadsheet(object):
         self.workbook.set_size(1000, 1200)
         self.styles['bold'] = self.workbook.add_format({'bold': True})
         self.worksheet = self.workbook.add_worksheet()
-        self.no_row = 7
-        self.title_row = self.no_row + 2
+        self.line_row = 7
+        self.before_table_row = 7
+        self.title_row = self.before_table_row + 2
         self.desc_row = self.title_row + 4
         A4 = 9
         self.worksheet.set_paper(A4)
@@ -25,7 +26,7 @@ class Spreadsheet(object):
         self.create_style_sub_title()
         self.create_title()
         self.create_address()
-        self.create_for_invoice()
+        self.create_content_before_table()
         self.create_class()
         self.create_table()
         self.create_body()
@@ -77,26 +78,11 @@ class Spreadsheet(object):
         self.worksheet.write('C6', address3, fmt)
         double_bottom_lines = self.workbook.add_format()
         double_bottom_lines.set_bottom(6)
-        self.worksheet.write('A%s'%self.no_row, '', double_bottom_lines)
-        self.worksheet.write('B%s'%self.no_row, '', double_bottom_lines)
-        self.worksheet.write('C%s'%self.no_row, '', double_bottom_lines)
-        self.worksheet.write('D%s'%self.no_row, '', double_bottom_lines)
-        self.worksheet.write('E%s'%self.no_row, '', double_bottom_lines)
-
-    def create_for_invoice(self):
-        fmt = self.workbook.add_format()
-        fmt.set_font_name('Arial')
-        # fmt.set_bg_color('#cccccc')
-        fmt.set_align('right')
-        left = self.workbook.add_format()
-        left.set_font_name('Arial')
-        left.set_align('left')
-        self.worksheet.write('D%s'%(self.no_row+0), 'for invoice (optional): ', fmt)
-        self.worksheet.write('E%s'%(self.no_row+0), self.invoice_number, left)
-        self.worksheet.write('A%s'%(self.no_row+0), 'No.')
-        self.worksheet.write('B%s'%(self.no_row+0), self.receipt_id, left)
-        self.worksheet.write('A%s'%(self.no_row+1), 'Date.')
-        self.worksheet.write('B%s'%(self.no_row+1), self.timestamp, left)
+        self.worksheet.write('A%s'%self.line_row, '', double_bottom_lines)
+        self.worksheet.write('B%s'%self.line_row, '', double_bottom_lines)
+        self.worksheet.write('C%s'%self.line_row, '', double_bottom_lines)
+        self.worksheet.write('D%s'%self.line_row, '', double_bottom_lines)
+        self.worksheet.write('E%s'%self.line_row, '', double_bottom_lines)
 
     def create_class(self):
         fmt = self.workbook.add_format()
@@ -144,9 +130,9 @@ class Spreadsheet(object):
         worksheet.set_column('B:B', 19)
         worksheet.set_column('C:C', 59)
         worksheet.set_column('E:E', 19)
-        worksheet.write('A%s'%(self.no_row+3), 'Receive with thanks from:')
-        worksheet.write('A%s'%(self.no_row+4), 'Name of student:')
-        worksheet.write('A%s'%(self.no_row+5), 'Address:')
+        worksheet.write('A%s'%(self.before_table_row+3), 'Receive with thanks from:')
+        worksheet.write('A%s'%(self.before_table_row+4), 'Name of student:')
+        worksheet.write('A%s'%(self.before_table_row+5), 'Address:')
         worksheet.write('A35', 'Thank you very much for your kind support.')
         worksheet.set_row(9, 40)
         worksheet.set_row(11, 40)
@@ -218,6 +204,25 @@ class ReceiptSheet(Spreadsheet):
     def get_title(self):
         return 'RECEIPT'
 
+    def create_content_before_table(self):
+        self.create_for_invoice()
+
+    def create_for_invoice(self):
+        no_row = self.before_table_row 
+        fmt = self.workbook.add_format()
+        fmt.set_font_name('Arial')
+        # fmt.set_bg_color('#cccccc')
+        fmt.set_align('right')
+        left = self.workbook.add_format()
+        left.set_font_name('Arial')
+        left.set_align('left')
+        self.worksheet.write('D%s'%(no_row+0), 'for invoice (optional): ', fmt)
+        self.worksheet.write('E%s'%(no_row+0), self.invoice_number, left)
+        self.worksheet.write('A%s'%(no_row+0), 'No.')
+        self.worksheet.write('B%s'%(no_row+0), self.receipt_id, left)
+        self.worksheet.write('A%s'%(no_row+1), 'Date.')
+        self.worksheet.write('B%s'%(no_row+1), self.timestamp, left)
+
 
 class InvoiceSheet(Spreadsheet):
     @staticmethod
@@ -227,5 +232,5 @@ class InvoiceSheet(Spreadsheet):
     def get_title(self):
         return 'INVOICE' 
 
-    def create_for_invoice(self):
+    def create_content_before_table(self):
         pass
