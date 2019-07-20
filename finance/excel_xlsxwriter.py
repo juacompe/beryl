@@ -3,15 +3,36 @@ import xlsxwriter
 import os, tempfile
 
 class Spreadsheet(object):
-    pass
-
-class ReceiptSheet(Spreadsheet):
     def __init__(self, filename, logo):
         self.filename = filename
         self.workbook = xlsxwriter.Workbook(filename)
         self.logo = logo
         self.styles = {}
 
+    def create_logo(self):
+        self.worksheet.insert_image('A1', self.logo, {'x_scale': 0.95, 'y_scale': 0.81})
+
+    def create_style_school_name(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_font_size(20)
+        fmt.set_font_color('#006737')
+        fmt.set_align('center')
+        fmt.set_font_name('Times')
+        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', fmt)
+
+    def create_style_sub_title(self):
+        fmt = self.workbook.add_format()
+        fmt.set_bold()
+        fmt.set_align('center')
+        fmt.set_font_size(15)
+        fmt.set_font_name('Times')
+        self.worksheet.write('C3', 'Nursery, Pre-School and Elementary', fmt)
+
+    def close(self):
+        self.workbook.close()
+
+class ReceiptSheet(Spreadsheet):
     def create(self):
         self.workbook.set_size(1000, 1200)
         self.styles['bold'] = self.workbook.add_format({'bold': True})
@@ -34,9 +55,6 @@ class ReceiptSheet(Spreadsheet):
         self.create_body()
         self.create_footer()
         self.close()
-
-    def close(self):
-        self.workbook.close()
 
     def set_invoice_number(self, i):
         self.invoice_number = i
@@ -82,26 +100,6 @@ class ReceiptSheet(Spreadsheet):
         worksheet.set_row(11, 40)
         worksheet.set_row(34, 40)
         worksheet.set_row(35, 40)
-
-    def create_logo(self):
-        self.worksheet.insert_image('A1', self.logo, {'x_scale': 0.95, 'y_scale': 0.81})
-
-    def create_style_school_name(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_font_size(20)
-        fmt.set_font_color('#006737')
-        fmt.set_align('center')
-        fmt.set_font_name('Times')
-        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', fmt)
-
-    def create_style_sub_title(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_align('center')
-        fmt.set_font_size(15)
-        fmt.set_font_name('Times')
-        self.worksheet.write('C3', 'Nursery, Pre-School and Elementary', fmt)
 
     def create_address(self):
         address1 = '25 / 3-4 Ruam Rudee Soi 1, Ploenchit Road, Bangkok 10330'
@@ -205,16 +203,10 @@ class ReceiptSheet(Spreadsheet):
         self.worksheet.write('B38', 'Receive by: ', fmt)
         self.worksheet.write('C38', '', underline)
 
-class InvoiceSheet(object):
+class InvoiceSheet(Spreadsheet):
     @staticmethod
     def get_file_name(id, timestamp):
         return 'inv_' + str(id) + '_'+ str(timestamp).replace('.','_')
-
-    def __init__(self, filename, logo):
-        self.filename = filename
-        self.workbook = xlsxwriter.Workbook(filename)
-        self.logo = logo
-        self.styles = {}
 
     def create(self):
         self.workbook.set_size(1000, 1200)
@@ -238,29 +230,6 @@ class InvoiceSheet(object):
         #self.create_body()
         #self.create_footer()
         self.close()
-
-    def close(self):
-        self.workbook.close()
-
-    def create_logo(self):
-        self.worksheet.insert_image('A1', self.logo, {'x_scale': 0.95, 'y_scale': 0.81})
-
-    def create_style_school_name(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_font_size(20)
-        fmt.set_font_color('#006737')
-        fmt.set_align('center')
-        fmt.set_font_name('Times')
-        self.worksheet.write('C2', 'RUAM RUDEE LEARNING CENTRE', fmt)
-
-    def create_style_sub_title(self):
-        fmt = self.workbook.add_format()
-        fmt.set_bold()
-        fmt.set_align('center')
-        fmt.set_font_size(15)
-        fmt.set_font_name('Times')
-        self.worksheet.write('C3', 'Nursery, Pre-School and Elementary', fmt)
 
     def create_title(self):
         fmt = self.workbook.add_format()
