@@ -205,7 +205,7 @@ class ReceiptSheet(Spreadsheet):
         self.worksheet.write('B38', 'Receive by: ', fmt)
         self.worksheet.write('C38', '', underline)
 
-class Invoice(object):
+class InvoiceSheet(object):
     @staticmethod
     def get_file_name(id, timestamp):
         return 'inv_' + str(id) + '_'+ str(timestamp).replace('.','_')

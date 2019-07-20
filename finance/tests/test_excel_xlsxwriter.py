@@ -1,5 +1,5 @@
 from django.test import TestCase
-from finance.excel_xlsxwriter import ReceiptSheet, Invoice
+from finance.excel_xlsxwriter import ReceiptSheet, InvoiceSheet
 
 class TestSpreadsheet(TestCase):
     def test_create_receipt(self):
@@ -28,10 +28,10 @@ def create_sample_receipt():
 def create_sample_invoice():
     logo = '/Users/juacompe/Projects/github.com/juacompe/beryl/media/rcis_logo.png'
     filename = "/tmp/invoice.xlsx"
-    s = Invoice(filename, logo)
+    s = InvoiceSheet(filename, logo)
     id = 12
     timestamp = '2019-06-30 11:47:32.832423'
-    print Invoice.get_file_name(id, timestamp)
+    print InvoiceSheet.get_file_name(id, timestamp)
     s.create()
 
 class MockItem(object):
