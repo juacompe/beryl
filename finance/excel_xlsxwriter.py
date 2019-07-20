@@ -17,6 +17,7 @@ class Spreadsheet(object):
         self.before_table_row = 7
         self.title_row = self.before_table_row + 2
         self.desc_row = self.title_row + 4
+        self.after_table_row = 35 
         A4 = 9
         self.worksheet.set_paper(A4)
         self.worksheet.fit_to_pages(1, 1)
@@ -129,14 +130,16 @@ class Spreadsheet(object):
         fmt.set_align('center')
 
     def create_body(self):
-        self.worksheet.write('A%s'%(self.before_table_row+3), 'Receive with thanks from:')
+        receive_with_thanks_row = self.before_table_row+3
+        address_row = self.before_table_row+5
+        self.worksheet.write('A%s'%receive_with_thanks_row, 'Receive with thanks from:')
+        self.worksheet.set_row(receive_with_thanks_row-1, 40)
         self.worksheet.write('A%s'%(self.before_table_row+4), 'Name of student:')
-        self.worksheet.write('A%s'%(self.before_table_row+5), 'Address:')
-        self.worksheet.write('A35', 'Thank you very much for your kind support.')
-        self.worksheet.set_row(9, 40)
-        self.worksheet.set_row(11, 40)
-        self.worksheet.set_row(34, 40)
-        self.worksheet.set_row(35, 40)
+        self.worksheet.write('A%s'%address_row, 'Address:')
+        self.worksheet.set_row(address_row-1, 40)
+        self.worksheet.set_row(self.after_table_row-1, 40)
+        self.worksheet.write('A%s'%self.after_table_row, 'Thank you very much for your kind support.')
+        self.worksheet.set_row(self.after_table_row, 40)
 
     def create_footer(self):
         fmt = self.workbook.add_format()
