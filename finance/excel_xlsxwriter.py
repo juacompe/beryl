@@ -248,19 +248,31 @@ class InvoiceSheet(Spreadsheet):
         pass
 
     def create_footer(self):
+        head = self.create_style_footer_align('left')
+        head.set_underline()
+        fmt = self.create_style_footer_align('left')
+        bullet = self.create_style_footer_align('right')
+        bullet.set_align('top')
+        footer_row = self.after_table_row+4
+        self.worksheet.merge_range('A%s:E%s'%(footer_row, footer_row), 'Please take note of the following remarks:', head)
+        self.worksheet.write('A%s'%(footer_row+1), '1.', bullet)
+        self.worksheet.merge_range('B%s:E%s'%(footer_row+1, footer_row+1), "No refund or reductions can be made in any fees for child's illness, temporary absence from school or change of plans.", fmt)
+        self.worksheet.write('A%s'%(footer_row+2), '2.', bullet)
+        self.worksheet.merge_range('B%s:E%s'%(footer_row+2, footer_row+2), 'Please be notified that the penalty of 100 Baht per day will be charged for late payment.', fmt)
+        self.worksheet.write('A%s'%(footer_row+3), '3.', bullet)
+        self.worksheet.merge_range('B%s:E%s'%(footer_row+3, footer_row+3), 'Payment should be made in Thai Baht by cash or cheque payable to "RUAM RUDEE LEARNING CENTRE" or "RC INTERNATIONAL SCHOOL" crossed "ACCOUNT PAYEE ONLY" and the words "OR BEARER" deleted.', fmt)
+        self.worksheet.set_row(footer_row+3-1, 25)
+        self.worksheet.write('A%s'%(footer_row+4), '4.', bullet)
+        self.worksheet.merge_range('B%s:E%s'%(footer_row+4, footer_row+4), 'A pupil is not officially enrolled until payment of fees.  As such, the pupil may be suspended from attending classes.', fmt)
+
+    def create_style_footer_align(self, align):
         fmt = self.workbook.add_format()
         fmt.set_font_name('Arial')
-        fmt.set_align('left')
+        fmt.set_align(align)
         fmt.set_font_size(9)
         fmt.set_bold()
         fmt.set_text_wrap()
-        footer_row = self.after_table_row+4
-        self.worksheet.merge_range('A%s:E%s'%(footer_row, footer_row), 'Please take note of the following remarks:', fmt)
-        self.worksheet.merge_range('A%s:E%s'%(footer_row+1, footer_row+1), "1. No refund or reductions can be made in any fees for child's illness, temporary absence from school or change of plans.", fmt)
-        self.worksheet.merge_range('A%s:E%s'%(footer_row+2, footer_row+2), '2. Please be notified that the penalty of 100 Baht per day will be charged for late payment.', fmt)
-        self.worksheet.merge_range('A%s:E%s'%(footer_row+3, footer_row+3), '3. Payment should be made in Thai Baht by cash or cheque payable to "RUAM RUDEE LEARNING CENTRE" or "RC INTERNATIONAL SCHOOL" crossed "ACCOUNT PAYEE ONLY" and the words "OR BEARER" deleted.', fmt)
-        self.worksheet.set_row(footer_row+3-1, 25)
-        self.worksheet.merge_range('A%s:E%s'%(footer_row+4, footer_row+4), '4. A pupil is not officially enrolled until payment of fees.  As such, the pupil may be suspended from attending classes.', fmt)
+        return fmt
         
     def get_last_row(self):
         return self.after_table_row + 10 
