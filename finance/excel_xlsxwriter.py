@@ -75,6 +75,13 @@ class Spreadsheet(object):
         self.worksheet.write('C4', address1, fmt)
         self.worksheet.write('C5', address2, fmt)
         self.worksheet.write('C6', address3, fmt)
+        double_bottom_lines = self.workbook.add_format()
+        double_bottom_lines.set_bottom(6)
+        self.worksheet.write('A%s'%self.no_row, '', double_bottom_lines)
+        self.worksheet.write('B%s'%self.no_row, '', double_bottom_lines)
+        self.worksheet.write('C%s'%self.no_row, '', double_bottom_lines)
+        self.worksheet.write('D%s'%self.no_row, '', double_bottom_lines)
+        self.worksheet.write('E%s'%self.no_row, '', double_bottom_lines)
 
     def create_for_invoice(self):
         fmt = self.workbook.add_format()
