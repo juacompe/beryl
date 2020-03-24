@@ -284,7 +284,7 @@ class InvoiceSheet(Spreadsheet):
         self.worksheet.write('A%s'%(footer_row+2), '2.', bullet)
         self.worksheet.merge_range('B%s:E%s'%(footer_row+2, footer_row+2), 'Please be notified that the penalty of 100 Baht per day will be charged for late payment.', fmt)
         self.worksheet.write('A%s'%(footer_row+3), '3.', bullet)
-        self.worksheet.merge_range('B%s:E%s'%(footer_row+3, footer_row+3), 'Payment should be made in Thai Baht by Cash to Account No. 082-2-59563-4 at Kasikorn Bank, Thanon Langsuan Branch into "RC INTERNATIONAL SCHOOL" Savings account.', fmt)
+        self.worksheet.merge_range('B%s:E%s'%(footer_row+3, footer_row+3), 'Payment should be made in Thai Baht by Cash to Account No. 082-2-59563-4 at Kasikorn Bank, Thanon Langsuan Branch into "RC INTERNATIONAL SCHOOL" Savings account. Remittance slip should be faxed to the Office at 0-2650-9747 or email to pook@rcis.ac.th', fmt)
         self.worksheet.set_row(footer_row+3-1, 25)
         self.worksheet.write('A%s'%(footer_row+4), '4.', bullet)
         self.worksheet.merge_range('B%s:E%s'%(footer_row+4, footer_row+4), 'Payment by cheque should be payable to "RC INTERNATIONAL SCHOOL" crossed "ACCOUNT PAYEE ONLY" and the words "OR BEARER" deleted.', fmt)
